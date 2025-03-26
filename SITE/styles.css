@@ -1,0 +1,476 @@
+*{
+    font-family: Avenir, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    text-align: justify;
+    box-sizing: border-box;
+}
+body{
+    background: #ededed;
+}
+p{
+    font-size: 1em;
+    line-height: 1.5em;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+/*HEADER & FOOTER*/
+header, footer{
+    width: 100%;
+    padding: 20px 0px;
+    background: url("https://www.pierre-giraud.com/wp-content/uploads/2019/07/cv-cover.jpg") #4f4f4f;
+    box-shadow: 0px 0px 15px #333;
+}
+header{
+    border-bottom: 2px solid #fff;
+    height: 120px;
+}
+header h1{
+    color: white;
+    font-size: 1.5em;
+    width: 90%;
+    margin: 0 auto;
+}
+
+footer{
+    border-top: 2px solid #fff;
+}
+footer p{
+    width: 90%;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+}
+footer a{
+    color: #fff;
+}
+
+/*SECTIONS*/
+section{
+    display: flex; 
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px #bbb;
+    background-color: #fff;
+}
+
+section h2{
+    margin: 20px 0;
+    width: 90%;
+}
+section > div{
+    width: 90%;
+}
+
+/*SECTION INFOS*/
+.photo{
+    text-align: center;
+}
+.photo img{
+    width: 150px;
+    height: 150px;
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 10px #777;
+    border-radius: 50%;
+    margin-top: -80px;
+}
+.prez{
+    border-bottom: 2px dashed #ccc;
+}
+.prez a{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto 30px auto;
+    color: #fff;
+    background-color: #EA0;
+    box-shadow: 0px 0px 10px #ccc;
+    border-radius: 5px;
+}
+.contact-flex{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.contact-flex p:first-child{
+    flex: 0 0 40%;
+}
+.contact-flex p:last-child{
+    flex: 0 0 60%;
+}
+.social{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px auto 0px auto;
+}
+.social img{
+    width: 40px;
+    height: 40px;
+}
+
+/*SECTION EXP ET FORMATION*/
+.exp{
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.exp-info{
+    display: flex;
+    flex-flow: column wrap;
+}
+.exp-logo{
+    flex: 0 0 25%;
+    max-width: 100px;
+}
+.exp-info{
+    flex: 0 0 70%;
+    margin-left: auto;
+}
+.exp img{
+    width: 100%;
+}
+.exp h3{
+    font-size:  1.2em;
+}
+.exp h4{
+    font-size:  1em;
+    font-weight: normal;
+}
+
+/*SECTION COMPETENCES*/
+.h3gauche{
+    width: 90%;
+}
+.comp{
+    display:flex;
+    flex-flow: row wrap;
+    margin-bottom: 10px;
+}
+.comp p{
+    flex: 0 0 40%;
+}
+.conteneur-barre{
+    flex: 0 0 60%;
+    border-radius: 5px;
+    background-color: grey;
+    border-bottom: 1px ridge grey;
+}
+.barre{
+    display: block;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.c85{
+    width: 85%;
+    background-color: #8B8;
+}
+.c90{
+    width: 90%;
+    background-color: #4B8;
+}
+.c95{
+    width: 95%;
+    background-color: #4B8;
+}
+.c100{
+    width: 100%;
+    background-color: #4B8;
+    border-radius: 5px;
+}
+.comp2{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.conteneur-barre2{
+    flex: 0 0 100%;
+    height: 0.5em;
+    margin-bottom: 0.25em;
+    border-radius: 5px;
+    background-color: grey;
+}
+
+/*SECTION INTERETS*/
+.interet{
+    flex: 0 1 50%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.interet img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px #555;
+}
+
+/*VERSION BUREAU DU CV*/
+@media screen and (min-width: 980px){
+    section{
+        width: 80%;
+        box-shadow: 0px 0px 10px #bbb;
+    }
+    a:hover{
+        color: #EA0;
+    }
+    header h1{
+        width: 80%;
+    }
+    .prez, .contact{
+        flex: 0 0 45%;
+    }
+    .prez{
+        border-bottom: none;
+        border-right: 2px solid #ccc;
+        padding-right: 20px;
+        margin-left: auto;
+    }
+    .contact{
+        padding-left: 20px;
+        margin-right: auto;
+    }
+    .prez a{
+        border: 2px solid transparent;
+    }
+    .prez a:hover{
+        color: #f28835;
+        background-color: #fff;
+        border: 2px solid #f28835;
+        box-shadow: 0px 0px 20px #666;
+    }
+    .exp-logo{
+        flex: 0 0 10%;
+    }
+    .exp-info, .exp-desc{
+        flex: 0 0 85%;
+        margin-left: auto;
+    }
+    .interet{
+        flex: 0 1 25%;
+    }
+}
+
+.portfolio .container {
+    width: 100%;
+    max-width: 100%; 
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+
+.gallery-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.gallery {
+    display: flex;
+    transition: transform 0.5s ease; 
+    width: 400%; 
+}
+
+
+.gallery .item {
+    width: 40vw; 
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery .item img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* Conteneur de la section fixe */
+#Départ {
+    display: flex; /* Utilisation de flex pour aligner l'image et la nav */
+    align-items: center; /* Centrer verticalement l'image et la navigation */
+    justify-content: flex-start; /* L'image à gauche, la nav à droite */
+    padding: 20px; /* Espacement autour du contenu */
+    background-color: #f8f9fa; /* Ajouter une couleur de fond */
+    border-radius: 15px; /* Arrondir les coins de la section */
+    position: fixed; /* Fixer la section pendant le défilement */
+    top: 0; /* Fixer en haut de la page */
+    left: 0; /* Fixer à gauche */
+    width: 100%; /* Occupe toute la largeur de la page */
+    z-index: 1000; /* S'assurer que la section est au-dessus des autres éléments */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajouter une ombre douce */
+}
+
+/* Image dans la section */
+.section-Départ {
+    width: 200px; /* Ajuste la taille de l'image selon tes besoins */
+    height: auto; /* La hauteur est ajustée pour garder les proportions */
+    margin-right: 10px; /* Espace entre l'image et la navigation */
+}
+
+/* Navigation */
+nav {
+    flex: 1; /* Prendre tout l'espace restant pour la barre de navigation */
+}
+
+/* Conteneur de la navigation */
+.nav-container {
+    display: flex;
+    justify-content: flex-start; /* Aligner les éléments à gauche */
+    gap: 20px; /* Espace entre les liens de navigation */
+}
+
+/* Style des liens de navigation */
+.nav-container a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.nav-container a:hover {
+    color: #007bff; /* Couleur au survol */
+}
+/* Espacement pour la section suivante */
+#XPCOMP {
+    margin-top: 300px; /* Ajuste cette valeur selon la hauteur de ta section fixe */
+}
+/* Style de la section contact */
+#contact {
+    padding: 40px;
+    background-color: #f8f9fa; /* Couleur de fond pour la section */
+}
+
+/* Conteneur principal utilisant Flexbox pour aligner les éléments */
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* Répartition égale entre les 3 parties */
+    align-items: center; /* Centrer verticalement les éléments */
+}
+
+/* Partie gauche : titre et carte Google Maps */
+.left-side {
+    flex: 1; /* La partie gauche prend 1/3 de l'espace */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Partie centrale : texte de contact */
+.center-side {
+    flex: 1; /* La partie centrale prend également 1/3 de l'espace */
+    text-align: center;
+}
+
+/* Partie droite : Instagram */
+.right-side {
+    flex: 1; /* La partie droite prend 1/3 de l'espace */
+    display: flex;
+    justify-content: flex-end; /* Alignement à droite */
+}
+
+/* Style de l'image Instagram */
+.insta-img {
+    width: 50px; /* Taille de l'image Instagram */
+    height: 50px;
+    border-radius: 50%; /* Forme circulaire pour l'image */
+}
+
+/* S'assurer que l'iframe prend toute la largeur possible */
+.left-side iframe {
+    width: 100%;
+    height: auto;
+}
+
+/* S'assurer que le texte est bien aligné dans les sections */
+.center-side p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+
+
+
+/* Style général pour les logos */
+.contact-icon {
+    width: 30px; /* Ajuste la taille des icônes selon tes préférences */
+    height: 30px; /* Assure que la hauteur soit la même que la largeur */
+    margin-right: 10px; /* Espacement entre l'icône et le texte */
+    object-fit: contain; /* S'assure que l'image garde son aspect sans déformation */
+}
+
+/* Optionnel : si tu veux ajuster la taille des images Instagram (ou autres icônes) */
+.insta-img {
+    width: 50px; /* Ajuste la taille selon tes besoins */
+    height: 50px;
+    border-radius: 50%; /* Forme circulaire pour l'image */
+}
+
+/* Optionnel : style pour l'iframe de Google Maps */
+.left-side iframe {
+    width: 100%;
+    height: auto;
+}
+
+/* Conteneur principal utilisant Flexbox pour aligner les éléments */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Alignement des éléments dans le contact-item */
+.contact-item {
+    display: flex;
+    align-items: center; /* Centrer verticalement les icônes et le texte */
+    margin-bottom: 15px; /* Espacement entre les items */
+}
+
+/* Pour l'alignement de la partie droite (réseaux sociaux) */
+.right-side a {
+    margin-left: 10px; /* Espacement entre les icônes de réseaux sociaux */
+}
+
+/* Style pour la section contact */
+#contact {
+    padding: 40px;
+    background-color: #f8f9fa; /* Fond de la section */
+}
