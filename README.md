@@ -1,1 +1,1 @@
-B1 student project at the request of a Product Owner from L'Esiee-IT in Cergy in France
+B1 student project at the request of a Product Owner from Esiee-IT / Cergy in France
