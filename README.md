@@ -10,5 +10,5 @@ B1 student project at the request of a Products Owners :<br> M. Frédéric LEFEV
 =>third Week : Flash JS <br>
 =>third deadline : 08/11/25<br>
 =>last Week: ?? <br>
-=> last deadline: ??<br>
+=>last deadline: ??<br>
 
