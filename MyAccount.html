@@ -14,21 +14,45 @@
             <p>renitialiser vos coordonnées manquantes pour acceder a vos jeux favoris</p>
         </header>
     </div>
-    
+
+
+<!--     
+Re-initialization form based on email, if lost, and password if lost, with buttons redirecting to other forms
+-->
+
+{/await}
 <form method="post" action="monformulaire.php">
     <div>
-        <p>E-Mail</p>
+        <p>Ancien E-Mail</p>
         <input type="email" placeholder="exemple@gmail.com">
         <button>
             <input type="button" >
         </button>
-        <p>Mot de passe</p>
+        <p>Nouveau E-Mail</p>
         <input type="password" placeholder="password">
         <button>
             <input type="button" >
         </button>
+        <div>
+        <p>Ancien Mot de Passe</p>
+        <input type="email" placeholder="New exemple@gmail.com">
+        <button>
+            <input type="button" >
+        </button>
+        <p>Nouveau Mot de passe</p>
+        <input type=" password" placeholder="New password">
+        <button>
+            <input type="button" >
+        </button>
+    </div>
+<!--     
+image in the right with the prompt from Figma
+-->
+    <div>
+        <img src="" alt="IMAGE PROMPT FIGMA">
     </div>
 </form>   
   
 </body>
 </html>
+
