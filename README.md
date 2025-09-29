@@ -3,8 +3,8 @@ B1 student project at the request of a Products Owners : M. Frédéric LEFEVRE  
 
 ---------------------------------------------------------------------------------------------
 
-=>first week : Flash HTML / CSS
-=>Second Week : Flash PHP
-=>third Week : Flash JS
-=> last week: ??
+=>first week : Flash HTML / CSS <br>
+=>Second Week : Flash PHP <br>
+=>third Week : Flash JS <br>
+=> last week: ?? <br>
 
