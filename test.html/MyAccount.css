@@ -1,0 +1,173 @@
+body {
+    background: url("img/darkfront.gif") no-repeat center center fixed;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: O;
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.all{
+    display: flex;
+    flex-wrap: wrap;   
+    justify-content: center; 
+    align-items: center;
+    width:  100%;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+
+.container{
+    flex: 1 1 320px;
+    max-width: 400px;
+    background-color: rgba(239, 245, 245, 0.478);
+    background-size: 300% 300%;
+    border-radius: 11px;
+    padding: 2Opx;
+    box-sizing: border-box;
+    padding: 29px;
+
+}
+
+.image {
+    border-radius: 16px;
+    flex: 1 1 500px;
+    max-width: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    margin-left: 20px;
+
+}
+
+#jspencore{
+    border-radius: 16px;
+    width: 130%;
+    max-width: 650px;
+    height: auto;
+}
+
+#titremain{
+    font-size: 2rem;
+    width: 100%;
+    color: black;
+}
+
+#titresecond{
+    font-size: 1rem;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+figcaption{
+    font-size: small;
+}
+
+#mdpo{
+    display: block;
+    text-decoration: none;
+    font-size: small;
+    text-align: end;
+    color: blue;
+    margin-top: -10px;
+}
+
+#text{
+    background-color: rgba(111, 127, 143, 0.488);
+    border-radius: 11px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 14px;
+    box-sizing: border-box;
+}
+
+#login1{
+    background-color:rgba(47, 79, 79, 0.55) ;
+    border-radius: 11px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 14px;
+    box-sizing: border-box;
+}
+
+#login2{
+    background-color: rgba(47, 79, 79, 0.55) ;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 11px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 11px;
+}
+
+
+
+#ou{
+    text-align: center;
+
+}
+
+
+
+#google{
+    border-radius: 16px;
+    width: 25%;
+    max-width: 25px;
+    height: auto;
+}
+
+#pasdecompte{
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+#home, #INSCR , #AC {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#home{
+    left: 60px;
+}
+
+#INSCR {
+  left: 110px; 
+}
+
+
+#home img,
+#INSCR img,
+#AC img {
+  width: 40px;   
+  height: auto;  
+  cursor: pointer;
+  opacity: 0.5; 
+  transition: opacity 0.3s ease; 
+
+}
+
+#home img:hover,
+#INSCR img:hover,
+#AC img:hover {
+  opacity: 1; 
+}
+
+#home,
+#INSCR,
+#AC {
+  text-decoration: none;
+}
+

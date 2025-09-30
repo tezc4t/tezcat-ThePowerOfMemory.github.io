@@ -1,0 +1,238 @@
+/*header*/
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #070320;
+}
+
+.header-container{
+    padding: 0 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header img {
+    width: 50px;
+    height: auto;
+    transition: 0.3s ease-in-out;
+    margin: 0px;
+}
+
+header img:hover {
+    transform: scale(1.2);
+    rotate: 10deg;
+}
+
+header .menu {
+    display: flex;
+    gap: 78px;
+}
+
+header .menu a {
+    text-decoration: none;
+    font-size: 16px;
+    padding : 10px;
+    transition: 0.3s ease-in-out;
+}
+
+header .menu a:hover {
+    transform: scale(1.05);
+    border-radius: 6px;
+}
+
+#acceuil{
+    color: #ffffff;
+}
+
+#scores{
+    color: #ffffff;
+}
+
+
+#contact {
+    border-radius: 6px;
+    background-color: rgb(255, 0, 0);
+    color: #ffffff;
+}
+
+#contact:hover {
+    box-shadow: 0 0 5px #ff0303;
+    transform: scale(1.05);
+}
+
+
+
+/* Titre et paragraphe au-dessus du tableau */
+.intro-jeu {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin-top: 120px;   /* espace sous le header */
+    margin-bottom: 40px; /* espace avant le tableau */
+}
+
+.intro-jeu h1 {
+    margin-bottom: 15px;
+}
+
+.options-jeu {
+    display: flex;
+    justify-content: center;   /* centre horizontalement */
+    align-items: center;       /* centre verticalement (utile si hauteur fixée) */
+    gap: 20px;                 /* espace entre chaque élément */
+    margin: 0 auto 40px auto;  /* auto pour bien centrer le bloc */
+    max-width: 600px;          /* pour éviter qu’ils s’étalent trop */
+}
+
+
+/* Style du tableau */
+table {
+    background-color: #070320;
+    border-collapse: collapse;
+    margin: 40px auto;
+}
+
+/* Style des cellules (agrandies) */
+td {
+  padding: 0;
+  border: 1px solid #ccc;
+  width: 120px;  /* plus large */
+  height: 120px; /* plus haut */
+}
+
+/* Style des boutons */
+td button {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Style des images */
+td img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Fond général */
+body {
+  background-color: #070320;
+}
+
+
+.section-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  gap: 40px; /* espace entre texte et image */
+  max-width: 1000px;
+  margin: auto;
+}
+
+.texte-gauche {
+  flex: 1;
+  color: #ffffff;
+}
+
+.sous-titre {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.corps {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.btn-jouer {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.image-droite img {
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px; /* Optionnel : coins arrondis */
+}
+
+/*footer*/
+footer {
+    margin-top: 100px;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer p {
+    color: black !important;
+}
+
+footer a {
+    color: black !important;
+    text-decoration: none;
+}
+
+
+.footer1 {
+    justify-content: start;
+    height: 215px;
+}
+
+.footer2 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: 215px;
+}
+
+.footer3 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.footer3 p {
+    margin-bottom: 0px;
+}
+
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+}
+
+
+#reseaux {
+    margin-top: 180px;
+    display: flex;
+    align-items: end;
+}
+
+#logo{
+    height: 50px;
+    margin: 0px;
+}
+
+footer hr{ 
+  border: 1px solid black;
+}
