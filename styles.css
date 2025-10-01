@@ -1,0 +1,206 @@
+/* ================================================
+   STYLE GLOBAL
+   ================================================ */
+   body {
+    background-color: #070320;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Police */
+    margin: 0; /* Supprime les marges par défaut (corrigé : O → 0) */
+    min-height: 100vh; /* Hauteur minimum = hauteur de l'écran */
+    background-size: cover; /* L’image couvre toute la surface */
+    display: flex; /* Mise en page en flexbox */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+
+/* ================================================
+   SECTION PRINCIPALE (wrapper global)
+   ================================================ */
+.all {
+    display: flex;
+    flex-wrap: wrap; /* Les éléments passent à la ligne si nécessaire */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* Inclut les paddings dans les dimensions */
+}
+
+/* ================================================
+   CONTENEUR DES ÉLÉMENTS (formulaires, etc.)
+   ================================================ */
+.container {
+    flex: 1 1 320px; /* Flex grow/shrink avec largeur de base */
+    max-width: 400px; 
+    background-color: rgba(175, 180, 180, 0.478); /* Fond transparent */
+    border-radius: 11px; /* Bords arrondis */
+    padding: 29px; /* Espacement interne (corrigé : O → 0) */
+    box-sizing: border-box;
+}
+
+/* ================================================
+   SECTION IMAGE
+   ================================================ */
+.image {
+    border-radius: 16px;
+    flex: 1 1 500px;
+    max-width: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Fond noir autour de l'image */
+    margin-left: 20px;
+}
+
+#jspencore {
+    border-radius: 16px;
+    width: 130%; /* Dépasse légèrement le conteneur */
+    max-width: 650px;
+    height: auto;
+}
+
+/* ================================================
+   TITRES ET TEXTES
+   ================================================ */
+#titremain {
+    font-size: 2rem; /* Titre principal */
+    width: 100%;
+    color: black;
+}
+
+#titresecond {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: black;
+}
+
+figcaption {
+    font-size: small; /* Légende sous une image */
+}
+
+/* ================================================
+   LIEN "mot de passe oublié"
+   ================================================ */
+#mdpo {
+    display: block;
+    text-decoration: none;
+    font-size: small;
+    text-align: end;
+    color: blue;
+    margin-top: -10px; /* Remonte légèrement */
+}
+
+/* ================================================
+   CHAMPS DE FORMULAIRE
+   ================================================ */
+#text {
+    background-color: rgba(111, 127, 143, 0.488);
+    border-radius: 11px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 14px;
+    box-sizing: border-box;
+}
+
+#login1 {
+    background-color: rgba(255, 0, 0, 0.819);
+    color:#ffffff ; 
+    border-radius: 11px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 14px;
+    box-sizing: border-box;
+}
+
+/* ================================================
+   BOUTON DE CONNEXION
+   ================================================ */
+#login2 {
+    font-size: 1em;
+    background-color: rgba(255, 0, 0, 0.819);
+    color: #ffffff; /* Texte blanc */
+    border: none;
+    cursor: pointer; /* Curseur pointeur */
+    text-decoration: none;
+    display: flex;
+    transition: background 0.3s ease; /* Effet hover */
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacement entre icône et texte */
+    border-radius: 11px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 11px;
+    box-sizing: border-box;
+}
+
+/* ================================================
+   TEXTE DE SÉPARATION ("OU")
+   ================================================ */
+#ou {
+    text-align: center;
+}
+
+/* ================================================
+   BOUTON GOOGLE (icône)
+   ================================================ */
+#google {
+    border-radius: 16px;
+    width: 25%;
+    max-width: 25px;
+    height: auto;
+}
+
+/* ================================================
+   LIEN "Pas de compte ?"
+   ================================================ */
+#pasdecompte {
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+/* ================================================
+   NAVIGATION (home, inscription, accueil)
+   ================================================ */
+#home, #INSCR, #AC {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Décalages spécifiques */
+#home {
+    left: 60px;
+}
+
+#INSCR {
+    left: 110px;
+}
+
+/* Images de navigation */
+#home img,
+#INSCR img,
+#AC img {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+    opacity: 0.5; /* Effet visuel par défaut */
+    transition: opacity 0.3s ease;
+}
+
+/* Effet au survol */
+#home img:hover,
+#INSCR img:hover,
+#AC img:hover {
+    opacity: 1;
+}
+
+/* Supprime soulignement sur les liens */
+#home,
+#INSCR,
+#AC {
+    text-decoration: none;
+}

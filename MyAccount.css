@@ -1,0 +1,187 @@
+/* ============================
+   🎨 Style général de la page
+   ============================ */
+   body {
+    background-color: #070320; 
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Police moderne */
+    margin: 0;                          /* Supprime les marges par défaut */
+    min-height: 100vh;                  /* Hauteur minimum = toute la hauteur de la fenêtre */
+    background-size: cover;             /* L'image couvre toute la zone */
+    display: flex;                      /* Mise en page en flexbox */
+    justify-content: center;            /* Centre horizontalement */
+    align-items: center;                /* Centre verticalement */
+}
+
+/* ============================
+   📦 Conteneurs principaux
+   ============================ */
+.all {
+    display: flex;                      /* Mise en page en flexbox */
+    flex-wrap: wrap;                    /* Retour à la ligne possible */
+    justify-content: center;            /* Centre horizontalement */
+    align-items: center;                /* Centre verticalement */
+    width: 100%;                        /* Prend toute la largeur */
+    padding: 20px;                      /* Espacement interne */
+    box-sizing: border-box;             /* Inclut padding et bordure dans la taille */
+}
+
+.container {
+    flex: 1 1 320px;                    /* Élément flexible avec taille minimale */
+    max-width: 400px;                   /* Largeur max */
+    background-color: rgba(111, 127, 143, 0.488); /* Fond semi-transparent */
+    background-size: 300% 300%;         /* Taille de l’arrière-plan (si image utilisée) */
+    border-radius: 11px;                /* Coins arrondis */
+    padding: 29px;                      /* Espacement interne */
+    box-sizing: border-box;             /* Pour inclure les bordures/paddings dans la largeur */
+}
+
+/* ============================
+   🖼️ Zone image
+   ============================ */
+.image {
+    border-radius: 16px;                /* Coins arrondis */
+    flex: 1 1 500px;                    /* Élément flexible plus large */
+    max-width: 650px;                   /* Largeur max */
+    display: flex;                      /* Flexbox */
+    justify-content: center;            /* Centre horizontalement */
+    align-items: center;                /* Centre verticalement */
+    background-color: black;            /* Fond noir */
+    margin-left: 20px;                  /* Décalage à gauche */
+}
+
+#jspencore {
+    border-radius: 16px;                /* Coins arrondis */
+    width: 130%;                        /* Débordement visuel volontaire */
+    max-width: 650px;                   /* Largeur max */
+    height: auto;                       /* Hauteur auto */
+}
+
+/* ============================
+   📝 Titres et textes
+   ============================ */
+#titremain {
+    font-size: 2rem;                    /* Titre principal grand */
+    width: 100%;                        /* Prend toute la largeur */
+    color: black;                       /* Texte noir */
+}
+
+#titresecond {
+    font-size: 1rem;                    /* Plus petit */
+    margin-bottom: 30px;                /* Espace sous le titre */
+    text-decoration: none;              /* Pas de soulignement */
+    color: black;                       /* Texte noir */
+}
+
+figcaption {
+    font-size: small;                   /* Texte de description des images */
+}
+
+#mdpo {
+    display: block;                     /* Lien affiché en bloc */
+    text-decoration: none;              /* Pas de soulignement */
+    font-size: small;                   /* Taille réduite */
+    text-align: end;                    /* Aligné à droite */
+    color: blue;                        /* Texte bleu */
+    margin-top: -10px;                  /* Remonté légèrement */
+}
+
+/* ============================
+   🔑 Champs et formulaires
+   ============================ */
+#text {
+    background-color: rgba(111, 127, 143, 0.488); /* Fond semi-transparent gris */
+    border-radius: 11px;                /* Coins arrondis */
+    margin-bottom: 20px;                /* Espacement sous le champ */
+    width: 100%;                        /* Largeur max */
+    padding: 14px;                      /* Espacement interne */
+    box-sizing: border-box;             /* Gestion correcte des dimensions */
+}
+
+#login1 {
+    background-color: rgba(47, 79, 79, 0.55); /* Fond gris foncé transparent */
+    border-radius: 11px;                      /* Coins arrondis */
+    margin-bottom: 20px;                      /* Espacement */
+    width: 100%;                              /* Largeur max */
+    padding: 14px;                            /* Espacement interne */
+    box-sizing: border-box;                   /* Gestion correcte des dimensions */
+}
+
+#login2 {
+  font-size: 1em;                        /* Taille normale */
+  background-color: rgba(47, 79, 79, 0.55); /* Fond sombre transparent */
+  color: #000000;                        /* Texte noir */
+  border: none;                          /* Pas de bordure */
+  cursor: pointer;                       /* Curseur "main" */
+  text-decoration: none;                 /* Pas de soulignement */
+  display: flex;                         /* Mise en page flexible */
+  transition: background 0.3s ease;      /* Transition fluide */
+  align-items: center;                   /* Centre verticalement */
+  justify-content: center;               /* Centre horizontalement */
+  gap: 10px;                             /* Espacement interne entre éléments */
+  border-radius: 11px;                   /* Coins arrondis */
+  width: 100%;                           /* Largeur max */
+  margin-top: 20px;                      /* Espace au-dessus */
+  padding: 11px;                         /* Espacement interne */
+  box-sizing: border-box;                /* Gestion correcte */
+}
+
+/* ============================
+   ➕ Éléments divers
+   ============================ */
+#ou {
+    text-align: center;                  /* Texte centré */
+}
+
+#google {
+    border-radius: 16px;                 /* Coins arrondis */
+    width: 25%;                          /* Taille relative */
+    max-width: 25px;                     /* Taille max */
+    height: auto;                        /* Hauteur auto */
+}
+
+#pasdecompte {
+    text-align: center;                  /* Texte centré */
+    margin-top: 20px;                    /* Espacement haut */
+    text-decoration: none;               /* Pas de soulignement */
+}
+
+/* ============================
+   🏠 Icônes de navigation
+   ============================ */
+#home, #INSCR, #AC {
+  position: absolute;                    /* Position absolue */
+  top: 10px;                             /* Positionné en haut */
+  left: 10px;                            /* Décalage initial à gauche */
+  display: inline-block;                 /* Alignement en ligne */
+  margin-right: 10px;                    /* Espacement entre éléments */
+}
+
+#home {
+    left: 60px;                          /* Ajustement gauche */
+}
+
+#INSCR {
+  left: 110px;                           /* Ajustement gauche */
+}
+
+#home img,
+#INSCR img,
+#AC img {
+  width: 40px;                           /* Taille fixe */
+  height: auto;                          /* Hauteur auto */
+  cursor: pointer;                       /* Curseur interactif */
+  opacity: 0.5;                          /* Semi-transparent par défaut */
+  transition: opacity 0.3s ease;         /* Transition fluide */
+}
+
+#home img:hover,
+#INSCR img:hover,
+#AC img:hover {
+  opacity: 1;                            /* Entièrement visible au survol */
+}
+
+#home,
+#INSCR,
+#AC {
+  text-decoration: none;                 /* Pas de soulignement pour les liens */
+}
