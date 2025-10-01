@@ -12,9 +12,9 @@ B1 student project at the request of a Products Owners :<br> M. Frédéric LEFEV
 => last Week: ?? <br>
 => last deadline: ??<br>
 
-Manquants : 
+Missing: 
 
-=> Page Accueil pour lier les pages index.html, inscription.html and Myaccount.html au reste du site pour deployer structure final V1
+=> Home page to link the index.html, inscription.html and Myaccount.html pages to the rest of the site to deploy final V1 structure
 
-=> Page "HTML CONTACT" pour finir le site
+=> “HTML CONTACT” page to finish the site
 
