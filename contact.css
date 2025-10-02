@@ -1,0 +1,475 @@
+/* Rendre le texte 'menu' du footer bien visible */
+.footer2 h4 {
+    color: #222 !important;
+    font-weight: bold;
+}
+/* Message sous le titre du formulaire limité en largeur */
+.sous-titre-form {
+    text-align: center;
+    color: #222;
+    font-size: 1em;
+    margin-bottom: 18px;
+    margin-top: -10px;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 16px;
+    padding: 16px 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+/* Titre du formulaire centré et en gros */
+.titre-form {
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 24px;
+    margin-top: 32px;
+    color: white;
+}
+.textarea-auto::placeholder {
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 2.5em;
+    margin-top: 24px;
+}
+.tel-row h3 {
+    margin: 0;
+    padding: 25px;
+}
+.tel-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+}
+.tel-icon {
+    width: 44px;
+    height: 44px;
+    display: block;
+}
+/*  style.css */
+
+/* Tous les textes en blanc */
+body * {
+    color: white !important;
+}
+
+/* Centrage des colonnes Liens, Téléphone, Adresse sur la page contact */
+.all {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 40px auto;
+    width: fit-content;
+
+}
+.all {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    margin: 40px auto;
+    width: fit-content;
+}
+
+.container {
+    flex: 1;
+    min-width: 180px;
+    text-align: center;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    border-left: 4px solid white;
+    border-width: 4px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px 4px;
+}
+
+
+.container:first-child {
+    border-left: none;
+}
+
+.social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+}
+.social-icon {
+  width: 100px;
+  height: auto;
+  cursor: pointer;
+}
+
+
+
+/* HEADER */
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #070320;
+}
+.header-container {
+    padding: 0 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header img {
+    width: 50px;
+    height: auto;
+    transition: 0.3s ease-in-out;
+    margin: 0px;
+}
+header img:hover {
+    transform: scale(1.2);
+    rotate: 10deg;
+}
+header .menu {
+    display: flex;
+    gap: 78px;
+}
+header .menu a {
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+}
+header .menu a:hover {
+    transform: scale(1.05);
+    border-radius: 6px;
+}
+#acceuil, #scores {
+    color: #ffffff;
+}
+#contact {
+    border-radius: 6px;
+    background-color: rgb(255, 0, 0);
+    color: #ffffff;
+}
+#contact:hover {
+    box-shadow: 0 0 5px #ff0303;
+    transform: scale(1.05);
+}
+
+/* Barre horizontale blanche sous les colonnes */
+.barre-horizontale {
+
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+    margin: 50px;
+    align-items: center;
+}
+
+/* Alignement image téléphone à gauche du texte */
+.tel-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+}
+.tel-icon {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.adresse-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+}
+.adresse-icon {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+/* Centrer l'image de la carte du monde sous le titre principal */
+.carte-centree {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+}
+
+.header-container img,
+header img {
+    height: 48px;
+    width: auto;
+    display: block;
+    transition: 0.3s ease-in-out;
+    margin: 0px;
+}
+header img:hover {
+    transform: scale(1.2);
+    rotate: 10deg;
+}
+nav.menu,
+header .menu {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: flex-end;
+}
+nav.menu a,
+header .menu a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+}
+nav.menu a:hover,
+header .menu a:hover {
+    transform: scale(1.05);
+    border-radius: 6px;
+}
+nav.nav-container {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+nav.nav-container a,
+nav.nav-container button {
+    margin: 0;
+}
+nav.nav-container a {
+    color: rgb(255, 255, 255);
+}
+
+/* MAIN */
+body {
+    background-color: #070320;
+}
+img {
+    max-width: 100%;
+    height: 0px;
+    margin: 0px;
+}
+h1 {
+    margin-top: 80px;
+    font-size: 35px;
+    min-width: 320px;
+    text-align: center;
+}
+h2, h3, h4, h5, h6 {
+    font-size: 35px;
+    min-width: 200px;
+    color: rgb(0, 0, 0);
+}
+p, figcaption, input, a, button, ul, li, table, th, td {
+    font-size: 18px;
+    min-width: 5px;
+    text-align: center;
+}
+#hypertxt {
+    color: white;
+    text-decoration: none;
+}
+section > div > div:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.contact-form {
+    padding: 32px;
+    border: 1px solid #ffffff;
+    color: black;
+}
+input[name="message"] {
+    font-size: 21px;
+    min-width: 320px;
+    max-width: 560px;
+    min-height: 96px;
+    padding: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.row-nom-prenom {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 16px;
+}
+.row-nom-prenom > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form figcaption {
+    align-self: unset;
+    margin-left: unset;
+}
+form input[type="text"],
+form input[type="email"] {
+    border-radius: 12px;
+    width: 60%;
+    min-width: 220px;
+    max-width: 560px;
+    text-align: center;
+    margin: 8px 0;
+    transition: transform 0.2s;
+    color: black !important;
+}
+
+.textarea-auto {
+    border-radius: 12px;
+    width: 60%;
+    min-width: 220px;
+    max-width: 560px;
+    min-height: 96px;
+    text-align: left;
+    margin: 8px 0;
+    transition: transform 0.2s;
+    color: black !important;
+    resize: vertical;
+    overflow-y: auto;
+    box-sizing: border-box;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"] {
+    transition: transform 0.2s;
+}
+input[type="text"]:hover,
+input[type="email"]:hover 
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    transform: scale(1);
+}
+form button[type="submit"] {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 32px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.08);
+    transition: background 0.2s, transform 0.2s;
+}
+#contact:hover {
+    box-shadow: 0 0 5px #ff0303;
+    transform: scale(1.05);
+}
+form button[type="submit"]:hover {
+    background-color: rgb(255, 0, 0);
+    transform: scale(1.05);
+}
+form button[type="submit"]:focus {
+    transform: scale(1);
+}
+
+
+/* FOOTER */
+footer {
+    margin-top: 100px;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer p {
+    color: black !important;
+}
+
+footer a {
+    color: black !important;
+    text-decoration: none;
+}
+
+/* Blocs de contenu */
+.footer1 {
+    justify-content: start;
+    height: 215px;
+}
+.footer2 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: 215px;
+    color: black !important;
+}
+.footer3 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.footer3 p {
+    margin-bottom: 5px;
+}
+
+/* Bas de page */
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+}
+
+
+#logo {
+    height: 50px;
+    margin: 0px;
+}
+
+footer hr { 
+  border: 1px solid black;
+}
+
+.reseaux {
+    display: flex;
+    gap: 10px; 
+    margin-top: 180px;
+    align-items: end;               /* Espacement entre icônes */
+}
+
+.reseau-icon {
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.reseau-icon:hover {
+    transform: scale(1.1);    /* Zoom au survol */
+}
