@@ -219,7 +219,12 @@ header .menu a:hover {
     place-items: center;
     color: #ffffff;
     margin-top: 5%;
+    #j-ai-plus-d-id{
+        font-size: x-large;
+        line-height: 0;
+    }
 }
+/*div6*/
 #div6{
     margin-left: 10%;
     margin-right: 10%;
@@ -228,22 +233,20 @@ header .menu a:hover {
     background-color: #FFF;
     margin-top: 5%;
     border-radius: 10px;
-    border-spacing: 70px;
-    column-gap: 100%;
+    border-spacing: 40px;
+    min-width: 100%;
 
 }
 #text-noire{
     color: black;
+    width: 40%;
+    margin-left: 10%;
     }
-#adresse-mail input {
+#adresse-mail{
     background-color: black;
     color: white;
-    border: none;
     padding: 8px;
     border-radius: 5px;
-}
-#adresse-mail input::placeholder {
-    color: white;
 }
 #text-noire,#adresse-mail{
     scale: 1.5;
