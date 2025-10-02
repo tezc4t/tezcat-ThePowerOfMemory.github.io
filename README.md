@@ -16,5 +16,5 @@ Missing:
 
 => Home page to link the index.html, inscription.html and Myaccount.html pages to the rest of the site to deploy final V1 structure
 
-=> “HTML CONTACT” page to finish the site
+
 
