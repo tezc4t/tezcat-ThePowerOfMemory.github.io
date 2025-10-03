@@ -4,9 +4,9 @@
    body {
     background-color: #070320;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Police */
-    margin: 0; /* Supprime les marges par défaut (corrigé : O → 0) */
-    min-height: 100vh; /* Hauteur minimum = hauteur de l'écran */
-    background-size: cover; /* L’image couvre toute la surface */
+    margin: 0; /* Supprime les marges par dÃ©faut (corrigÃ© : O â†’ 0) */
+    min-height: 100vh; /* Hauteur minimum = hauteur de l'Ã©cran */
+    background-size: cover; /* Lâ€™image couvre toute la surface */
     display: flex; /* Mise en page en flexbox */
     justify-content: center; /* Centre horizontalement */
     align-items: center; /* Centre verticalement */
@@ -17,7 +17,7 @@
    ================================================ */
 .all {
     display: flex;
-    flex-wrap: wrap; /* Les éléments passent à la ligne si nécessaire */
+    flex-wrap: wrap; /* Les Ã©lÃ©ments passent Ã  la ligne si nÃ©cessaire */
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -26,14 +26,14 @@
 }
 
 /* ================================================
-   CONTENEUR DES ÉLÉMENTS (formulaires, etc.)
+   CONTENEUR DES Ã‰LÃ‰MENTS (formulaires, etc.)
    ================================================ */
 .container {
     flex: 1 1 320px; /* Flex grow/shrink avec largeur de base */
     max-width: 400px; 
     background-color: rgba(175, 180, 180, 0.478); /* Fond transparent */
     border-radius: 11px; /* Bords arrondis */
-    padding: 29px; /* Espacement interne (corrigé : O → 0) */
+    padding: 29px; /* Espacement interne (corrigÃ© : O â†’ 0) */
     box-sizing: border-box;
 }
 
@@ -53,8 +53,9 @@
 
 #jspencore {
     border-radius: 16px;
-    height: 577px;
-    width: 650px
+    width: 130%; /* DÃ©passe lÃ©gÃ¨rement le conteneur */
+    max-width: 650px;
+    height: auto;
 }
 
 /* ================================================
@@ -74,11 +75,11 @@
 }
 
 figcaption {
-    font-size: small; /* Légende sous une image */
+    font-size: small; /* LÃ©gende sous une image */
 }
 
 /* ================================================
-   LIEN "mot de passe oublié"
+   LIEN "mot de passe oubliÃ©"
    ================================================ */
 #mdpo {
     display: block;
@@ -86,7 +87,7 @@ figcaption {
     font-size: small;
     text-align: end;
     color: blue;
-    margin-top: -10px; /* Remonte légèrement */
+    margin-top: -10px; /* Remonte lÃ©gÃ¨rement */
 }
 
 /* ================================================
@@ -125,7 +126,7 @@ figcaption {
     transition: background 0.3s ease; /* Effet hover */
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Espacement entre icône et texte */
+    gap: 10px; /* Espacement entre icÃ´ne et texte */
     border-radius: 11px;
     width: 100%;
     margin-top: 20px;
@@ -134,14 +135,14 @@ figcaption {
 }
 
 /* ================================================
-   TEXTE DE SÉPARATION ("OU")
+   TEXTE DE SÃ‰PARATION ("OU")
    ================================================ */
 #ou {
     text-align: center;
 }
 
 /* ================================================
-   BOUTON GOOGLE (icône)
+   BOUTON GOOGLE (icÃ´ne)
    ================================================ */
 #google {
     border-radius: 16px;
@@ -170,7 +171,7 @@ figcaption {
     margin-right: 10px;
 }
 
-/* Décalages spécifiques */
+/* DÃ©calages spÃ©cifiques */
 #home {
     left: 60px;
 }
@@ -186,7 +187,7 @@ figcaption {
     width: 40px;
     height: auto;
     cursor: pointer;
-    opacity: 0.5; /* Effet visuel par défaut */
+    opacity: 0.5; /* Effet visuel par dÃ©faut */
     transition: opacity 0.3s ease;
 }
 
