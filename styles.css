@@ -15,7 +15,6 @@
 /* ================================================
    SECTION PRINCIPALE (wrapper global)
    ================================================ */
-   ================================================ */
 .all {
     display: flex;
     flex-wrap: wrap; /* Les éléments passent à la ligne si nécessaire */
