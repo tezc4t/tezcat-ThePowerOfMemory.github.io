@@ -95,7 +95,7 @@ header .menu a:hover {
 /*div1*/
 #div1{
     align-self: left;
-    background-image: url(img/game.png);
+    background-image: url(img/bannierejv.png);
     background-repeat: no-repeat;
     background-size: 40%;
     background-position-x: 45%;
@@ -148,7 +148,7 @@ header .menu a:hover {
 /*div3*/
 #div3{
     padding-bottom: 50%;
-    background-image: url(img/neon.jpeg);
+    background-image: url(img/playjv.jpg);
     background-repeat: no-repeat;
     background-size: 80%;
     background-position-y: 60%;

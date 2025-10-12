@@ -2,7 +2,7 @@
    STYLE GLOBAL
    ================================================ */
    body {
-    background-color: #070320;
+    background-color: #ffffff;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Police */
     margin: 0; /* Supprime les marges par dÃ©faut (corrigÃ© : O â†’ 0) */
     min-height: 100vh; /* Hauteur minimum = hauteur de l'Ã©cran */
@@ -31,7 +31,7 @@
 .container {
     flex: 1 1 320px; /* Flex grow/shrink avec largeur de base */
     max-width: 400px; 
-    background-color: rgba(175, 180, 180, 0.478); /* Fond transparent */
+    background-color: white; 
     border-radius: 11px; /* Bords arrondis */
     padding: 29px; /* Espacement interne (corrigÃ© : O â†’ 0) */
     box-sizing: border-box;
@@ -86,7 +86,7 @@ figcaption {
     text-decoration: none;
     font-size: small;
     text-align: end;
-    color: blue;
+    color: #1E4AE9;
     margin-top: -10px; /* Remonte lÃ©gÃ¨rement */
 }
 
@@ -94,7 +94,7 @@ figcaption {
    CHAMPS DE FORMULAIRE
    ================================================ */
 #text {
-    background-color: rgba(111, 127, 143, 0.488);
+    background-color: #F7FBFF;
     border-radius: 11px;
     margin-bottom: 20px;
     width: 100%;
@@ -103,7 +103,7 @@ figcaption {
 }
 
 #login1 {
-    background-color: rgba(255, 0, 0, 0.819);
+    background-color: #162D3A;
     color:#ffffff ; 
     border-radius: 11px;
     margin-bottom: 20px;
@@ -117,8 +117,8 @@ figcaption {
    ================================================ */
 #login2 {
     font-size: 1em;
-    background-color: rgba(255, 0, 0, 0.819);
-    color: #ffffff; /* Texte blanc */
+    background-color: #c7d0d1;
+    color: #313957;
     border: none;
     cursor: pointer; /* Curseur pointeur */
     text-decoration: none;
