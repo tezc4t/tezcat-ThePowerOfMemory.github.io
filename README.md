@@ -3,7 +3,7 @@ B1 student project at the request of a Products Owners :<br> M. Frédéric LEFEV
 
 ---------------------------------------------------------------------------------------------
 
-=> first week : Flash HTML / CSS<br>
+=> first week : Flash HTML / CSS (COMPLETED)<br>
 => first deadline : 03/10/25<br>
 => Second Week : Flash PHP <br>
 => Second deadline : 18/10/25<br>
