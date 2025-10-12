@@ -14,7 +14,7 @@ B1 student project at the request of a Products Owners :<br> M. Frédéric LEFEV
 
 Missing: 
 
-=> Home page to link the index.html, inscription.html and Myaccount.html pages to the rest of the site to deploy final V1 structure
+=> redo the game interface
 
 
 
