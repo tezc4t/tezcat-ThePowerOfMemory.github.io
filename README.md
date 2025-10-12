@@ -3,18 +3,18 @@ B1 student project at the request of a Products Owners :<br> M. Frédéric LEFEV
 
 ---------------------------------------------------------------------------------------------
 
-=> first week : Flash HTML / CSS<br>
+=> first week : Flash HTML / CSS (COMPLETED)<br>
 => first deadline : 03/10/25<br>
-=> Second Week : Flash PHP <br>
+=> Second Week : Flash BDD SQL (NOW) <br>
 => Second deadline : 18/10/25<br>
-=> third Week : Flash JS <br>
+=> third Week : Flash PHP / JS <br>
 => third deadline : 08/11/25<br>
 => last Week: ?? <br>
 => last deadline: ??<br>
 
 Missing: 
 
-=> Home page to link the index.html, inscription.html and Myaccount.html pages to the rest of the site to deploy final V1 structure
+=> redo the game interface
 
 
 
