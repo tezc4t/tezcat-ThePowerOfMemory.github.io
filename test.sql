@@ -42,7 +42,7 @@ CREATE TABLE jeu (
 ---/ELEMENTS DES TABLES/---
 --utilisateurs--
 INSERT INTO utilisateur('Pseudo','EMAIL','MDP'),
-value('tezcat','tezcat.auguste@gmail.com','tezcat'),
+VALUES('tezcat','tezcat.auguste@gmail.com','tezcat'),
     ('maxatlas','max@pilato.fr','HDue98è§!98K'),
     ('Nathev','nahtan.blabla@truc.fr','KhbkuhIH!8'),
     ('Thomas','tomas.blublu@truc.fr','krj7§IjIJ8K'),
