@@ -16,9 +16,9 @@ CREATE TABLE score(
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     user_id INT UNSIGNED NOT NULL,
     game_id INT UNSIGNED NOT NULL,
-    difficulty ENUM(1,2,3),
-    score INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    created_at INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    difficulty ENUM('1','2','3'),
+    score TIME,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(id)
 )
 
