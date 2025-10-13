@@ -1,0 +1,24 @@
+CREATE TABLE utilisateur(
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    Pseudo VARCHAR(40) NOT NULL,
+    EMAIL VARCHAR(40) NOT NULL,
+    MDP VARCHAR(40) NOT NULL,
+    created_at DATETIME NOT NULL,
+    PRIMARY KEY(id)
+)
+
+INSERT INTO inscription('Pseudo','EMAIL','MDP')
+value('tezcat','tezcat.auguste@gmail.com','tezcat')
+
+
+
+CREATE TABLE score(
+    id INT UNSIGNED NOT FULL AUTO_INCREMENT,
+    user_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    game_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    difficulty ENUM(1,2,3),
+    score INT UNSIGNED NOT NULL AUTO_INCREMENT,
+)
+
+
+
