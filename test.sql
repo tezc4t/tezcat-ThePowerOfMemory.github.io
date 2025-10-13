@@ -26,7 +26,7 @@ CREATE TABLE msg(
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     game_id INT UNSIGNED NOT NULL,
     user_id INT UNSIGNED NOT NULL,
-    commentaire TEXT,
+    message VARCHAR(200),
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(id)
 )
