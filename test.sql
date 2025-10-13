@@ -20,11 +20,11 @@ CREATE TABLE score(
     PRIMARY KEY(id)
 )
 
-CREATE TABLE message(
+CREATE TABLE msg(
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     game_id INT UNSIGNED NOT NULL,
     user_id INT UNSIGNED NOT NULL,
-    message VARCHAR(200),
+    commentaire TEXT,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(id)
 )
@@ -38,3 +38,4 @@ INSERT INTO jeu VALUES(
     1,
     "Power Of Memory"
 )
+
