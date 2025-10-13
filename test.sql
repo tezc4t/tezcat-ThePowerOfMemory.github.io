@@ -7,7 +7,7 @@ CREATE TABLE utilisateur(
     PRIMARY KEY(id)
 )
 
-INSERT INTO inscription('Pseudo','EMAIL','MDP')
+INSERT INTO utilisateur('Pseudo','EMAIL','MDP')
 value('tezcat','tezcat.auguste@gmail.com','tezcat')
 
 CREATE TABLE score(
