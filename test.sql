@@ -98,7 +98,7 @@ INSERT INTO msg (game_id,user_id,Commentaire text)
 VALUES(Power_of_Memory,1,"gg" )
 
 
----MSG PRIVEE et données de test------
+---MSG PRIVEE et données de test kyllian------
         
 CREATE TABLE messagerie_privee (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
