@@ -37,6 +37,13 @@ CREATE TABLE jeu (
     nom_du_jeu VARCHAR(20),
     PRIMARY KEY(id)
  )
+
+
+SELECT nom_du_jeu, username, difficulty, score, created_at
+FROM score JOIN users ON score.user_id = users.id
+JOIN jeu ON jeu.id = score.game_id
+WHERE username LIKE '%n%'
+ORDER BY difficulty, score;
     --FIN Table jeu--
 ---/FIN TABLES/---
 ---/ELEMENTS DES TABLES/---
