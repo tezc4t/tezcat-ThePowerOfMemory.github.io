@@ -11,7 +11,7 @@ CREATE TABLE utilisateur(
 )
 --FIN Table utilisateur--
 --Table score--
-CREATE TABLE score(
+CREATE TABLE scores(
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     user_id INT UNSIGNED NOT NULL,
     game_id INT UNSIGNED NOT NULL,
@@ -49,6 +49,10 @@ VALUES('tezcat','tezcat.auguste@gmail.com','tezcat'),
     ('Random','random.random@truc.fr','sjhfsIHO87§6');
 
 --FIN utilisateurs--
+--scores--
+INSERT INTO score (user_id, game_id, difficulty, score)
+Values(5,1,'3',48),(2,1,'2',35)
+--FIN scores--
 --messages--
 INSERT INTO msg (game_id, user_id, message)
 VALUES(1,1,"salut à tous c’est ma 1re fois ici, qlq1 pour une partie ?"),
