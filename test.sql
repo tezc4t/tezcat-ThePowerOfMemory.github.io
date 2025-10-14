@@ -150,7 +150,7 @@ WHERE id = 21;
 DELETE FROM messagerie_privee
 WHERE id=21
 
-SELECT Pesudo,msg,created_at FROM messagerie_privee 
+SELECT Pesudo,msg,created_att FROM messagerie_privee 
 JOIN utilisateur ON utilisateur.id=message_privee.user_sender_id
 WHERE uder_sender_id = 1  AND user_receiver_id= 2
 ORDER BY created_att DESC 
