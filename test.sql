@@ -3,9 +3,9 @@
     --Table utilisateur--
     CREATE TABLE utilisateur(
         id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-        Pseudo VARCHAR(40) NOT NULL,
-        EMAIL VARCHAR(40) NOT NULL,
-        MDP VARCHAR(40) NOT NULL,
+        Pseudo VARCHAR(256) NOT NULL,
+        EMAIL VARCHAR(256) NOT NULL,
+        MDP VARCHAR(256) NOT NULL,
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
         PRIMARY KEY(id)
     )
