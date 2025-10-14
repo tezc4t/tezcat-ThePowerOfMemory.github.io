@@ -154,5 +154,5 @@ WHERE id=21
 SELECT nom_du_jeu, username, difficulty, score, created_at
 FROM score JOIN utilisateur ON score.user_id = utilisateur.id
 JOIN jeu ON jeu.id = score.game_id
-WHERE username LIKE '%%'
+WHERE user_id LIKE '%%'
 ORDER BY difficulty, score;
