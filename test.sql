@@ -22,40 +22,40 @@
     )
     --FIN Table score--
     --Table msg--
-    CREATE TABLE msg(
-        id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-        game_id INT UNSIGNED NOT NULL,
-        user_id INT UNSIGNED NOT NULL,
-        message TEXT,
-        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-        PRIMARY KEY(id)
-    )
+CREATE TABLE msg(
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    game_id INT UNSIGNED NOT NULL,
+    user_id INT UNSIGNED NOT NULL,
+    message TEXT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id)
+)
     --FIN Table msg--
     --Table jeu--
-    CREATE TABLE jeu (
-        id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-        nom_du_jeu VARCHAR(20),
-        PRIMARY KEY(id)
-    )
+CREATE TABLE jeu (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    nom_du_jeu VARCHAR(20),
+    PRIMARY KEY(id)
+ )
     --FIN Table jeu--
 ---/FIN TABLES/---
 ---/ELEMENTS DES TABLES/---
     --utilisateurs--
-    INSERT INTO utilisateur('Pseudo','EMAIL','MDP'),
-    VALUES('tezcat','tezcat.auguste@gmail.com','tezcat'),
-        ('maxatlas','max@pilato.fr','HDue98è§!98K'),
-        ('Nathev','nahtan.blabla@truc.fr','KhbkuhIH!8'),
-        ('Thomas','tomas.blublu@truc.fr','krj7§IjIJ8K'),
-        ('Random','random.random@truc.fr','sjhfsIHO87§6');
+INSERT INTO utilisateur('Pseudo','EMAIL','MDP'),
+VALUES('tezcat','tezcat.auguste@gmail.com','tezcat'),
+    ('maxatlas','max@pilato.fr','HDue98è§!98K'),
+    ('Nathev','nahtan.blabla@truc.fr','KhbkuhIH!8'),
+    ('Thomas','tomas.blublu@truc.fr','krj7§IjIJ8K'),
+    ('Random','random.random@truc.fr','sjhfsIHO87§6');
     
     --FIN utilisateurs--
     --scores--
-    INSERT INTO score (user_id, game_id, difficulty, score)
-    Values(5,1,'3',48),(2,1,'2',35)
+INSERT INTO score (user_id, game_id, difficulty, score)
+Values(5,1,'3',48),(2,1,'2',35)
     --FIN scores--
     --messages--
-    INSERT INTO msg (game_id, user_id, message)
-    VALUES(1,1,"salut à tous c’est ma 1re fois ici, qlq1 pour une partie ?"),
+INSERT INTO msg (game_id, user_id, message)
+VALUES(1,1,"salut à tous c’est ma 1re fois ici, qlq1 pour une partie ?"),
     (1,2,"yo bienvenue tezcat ! chaud pour une game"),
     (1,3,"salut, moi aussi j’suis opé, on lance ?"),
     (1,1,"go go go j’veux voir si j’ai encore une mémoire décente XD"),
@@ -82,16 +82,16 @@
     (1,5,"j’vous l’avais dit 1er. À qui le tour de perdre ?")
     --FIN messages--
     --jeu--
-    INSERT INTO jeu VALUES(
-        1,
-        "Power Of Memory"
-    )
+INSERT INTO jeu VALUES(
+    1,
+    "Power Of Memory"
+)
     --FIN jeu--
 ---/FIN ELEMENTS DES TABLES/---
 ---/SELECTION D'ELEMENTS/---
     ---id utilisateur < email + mdp---
-    SELECT id FROM utilisateur 
-    WHERE EMAIL = '...' AND MDP = '...'
+SELECT id FROM utilisateur 
+WHERE EMAIL = '...' AND MDP = '...'
     ---FIN id utilisateur < email + mdp---
 ---/FIN SELECTION D'ELEMENTS/---
 INSERT INTO msg (game_id,user_id,Commentaire text)
