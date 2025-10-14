@@ -136,7 +136,7 @@ VALUES
   (1, 2, 'Bonne chance pour le tournoi !', 1, NOW(), NOW()),
   (2, 1, 'Merci, à toi aussi !', 0, NULL, NOW());
 
--- Insertion des messages supplémentaires (sans msg_id, corrigé)
+-- Insertion des messages supplémentaires (sans msg_id)
 INSERT INTO messagerie_privee (user_sender_id, user_receiver_id, msg, is_read, read_at, created_at)
 VALUES
   (4, 5, 'mec on lance une game?', 1, NOW(), NOW()),
