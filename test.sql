@@ -156,3 +156,10 @@ WHERE id = 21;
 
 DELETE FROM messagerie_privee
 WHERE id=21
+
+-- Recherche de score par pseudo --
+SELECT nom_du_jeu, username, difficulty, score, created_at
+FROM score JOIN utilisateur ON score.user_id = utilisateur.id
+JOIN jeu ON jeu.id = score.game_id
+WHERE username LIKE '%%'
+ORDER BY difficulty, score;
