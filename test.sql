@@ -148,4 +148,4 @@ SET msg = 'XD ON LANCE'
 WHERE id = 21;
 
 DELETE FROM messagerie_privee
-WHERE id:21
+WHERE id=21
