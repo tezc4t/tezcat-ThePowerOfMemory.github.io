@@ -106,7 +106,7 @@ CREATE TABLE messagerie_privee (
     user_sender_id INT UNSIGNED NOT NULL,
     user_receiver_id INT UNSIGNED NOT NULL,
     msg TEXT NOT NULL,
-    created_att DATETIME DEFAULT CURRENT_TIMESTAMP,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     is_read TINYINT(1) DEFAULT 0,
     read_at DATETIME NULL,
     PRIMARY KEY (id)
@@ -150,15 +150,14 @@ WHERE id = 21;
 DELETE FROM messagerie_privee
 WHERE id=21
 
-SELECT Pesudo,msg,created_att FROM messagerie_privee 
+    
+SELECT msg,created_at 
+FROM messagerie_privee 
 JOIN utilisateur ON utilisateur.id=message_privee.user_sender_id
 WHERE uder_sender_id = 1  AND user_receiver_id= 2
 ORDER BY created_att DESC 
 
     
-    
-    
-
 -- Recherche de score par pseudo --
 SELECT nom_du_jeu, user_id, difficulty, score, created_at
 FROM score JOIN utilisateur ON score.user_id = utilisateur.id
