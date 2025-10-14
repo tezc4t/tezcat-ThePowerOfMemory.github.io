@@ -112,31 +112,31 @@ CREATE TABLE messagerie_privee (
     PRIMARY KEY (id)
 )
 
-INSERT INTO messagerie_privee (msg_id, user_sender_id, user_receiver_id, msg, is_read, read_at, created_at) 
-VALUES(1, 1, 2, 'Salut, comment ça va ?', 1, '2025-10-14 09:15:00', '2025-10-14 09:00:00'),
-    (2, 2, 1, 'Ça va bien, merci ! Et toi ?', 1, '2025-10-14 09:16:30', '2025-10-14 09:05:00'),
-    (3, 1, 3, 'Tu viens au jeu ce soir ?', 0, NULL, '2025-10-14 09:10:00'),
-    (4, 3, 1, 'Oui, à quelle heure ?', 0, NULL, '2025-10-14 09:12:00'),
-    (5, 2, 3, 'Nouveau niveau débloqué!', 1, '2025-10-13 18:00:00', '2025-10-13 17:50:00'),
-    (6, 3, 2, 'Bravo pour ton score !', 0, NULL, '2025-10-14 09:20:00'),
-    (7, 1, 2, 'On se retrouve demain ?', 0, NULL, '2025-10-14 09:25:00'),
-    (8, 2, 1, 'Oui, à 20h !', 1, '2025-10-14 09:26:00', '2025-10-14 09:23:00'),
-    (9, 3, 1, 'J’ai besoin d’aide sur ce niveau.', 1, '2025-10-14 10:00:00', '2025-10-14 09:55:00'),
-    (10, 1, 3, 'Pas de problème, je t’aide.', 0, NULL, '2025-10-14 09:57:00'),
-    (11, 2, 3, 'Tu as vu la mise à jour ?', 0, NULL, '2025-10-14 10:10:00'),
-    (12, 3, 2, 'Oui, c’est top !', 1, '2025-10-14 10:15:00', '2025-10-14 10:12:00'),
-    (13, 1, 2, 'Quel est ton meilleur score ?', 0, NULL, '2025-10-14 10:20:00'),
-    (14, 2, 1, 'Je crois que c’est 3000 points.', 1, '2025-10-14 11:30:00', '2025-10-14 10:25:00'),
-    (15, 3, 1, 'On fait une équipe ?', 0, NULL, '2025-10-14 10:30:00'),
-    (16, 1, 3, 'Avec plaisir !', 0, NULL, '2025-10-14 10:35:00'),
-    (17, 2, 3, 'Rendez-vous en ligne à 19h.', 1, '2025-10-13 17:45:00', '2025-10-13 17:40:00'),
-    (18, 3, 2, 'OK, je serai là.', 0, NULL, '2025-10-14 10:40:00'),
-    (19, 1, 2, 'Bonne chance pour le tournoi !', 1, '2025-10-14 08:00:00', '2025-10-14 07:50:00'),
-    (20, 2, 1, 'Merci, à toi aussi !', 0, NULL, '2025-10-14 09:37:00');
+INSERT INTO messagerie_privee ( user_sender_id, user_receiver_id, msg, is_read, read_at, created_at) 
+VALUES( 1, 2, 'Salut, comment ça va ?', 1, '2025-10-14 09:15:00', '2025-10-14 09:00:00'),
+    ( 2, 1, 'Ça va bien, merci ! Et toi ?', 1, '2025-10-14 09:16:30', '2025-10-14 09:05:00'),
+    ( 1, 3, 'Tu viens au jeu ce soir ?', 0, NULL, '2025-10-14 09:10:00'),
+    ( 3, 1, 'Oui, à quelle heure ?', 0, NULL, '2025-10-14 09:12:00'),
+    ( 2, 3, 'Nouveau niveau débloqué!', 1, '2025-10-13 18:00:00', '2025-10-13 17:50:00'),
+    ( 3, 2, 'Bravo pour ton score !', 0, NULL, '2025-10-14 09:20:00'),
+    ( 1, 2, 'On se retrouve demain ?', 0, NULL, '2025-10-14 09:25:00'),
+    ( 2, 1, 'Oui, à 20h !', 1, '2025-10-14 09:26:00', '2025-10-14 09:23:00'),
+    ( 3, 1, 'J’ai besoin d’aide sur ce niveau.', 1, '2025-10-14 10:00:00', '2025-10-14 09:55:00'),
+    ( 1, 3, 'Pas de problème, je t’aide.', 0, NULL, '2025-10-14 09:57:00'),
+    ( 2, 3, 'Tu as vu la mise à jour ?', 0, NULL, '2025-10-14 10:10:00'),
+    ( 3, 2, 'Oui, c’est top !', 1, '2025-10-14 10:15:00', '2025-10-14 10:12:00'),
+    ( 1, 2, 'Quel est ton meilleur score ?', 0, NULL, '2025-10-14 10:20:00'),
+    ( 2, 1, 'Je crois que c’est 3000 points.', 1, '2025-10-14 11:30:00', '2025-10-14 10:25:00'),
+    ( 3, 1, 'On fait une équipe ?', 0, NULL, '2025-10-14 10:30:00'),
+    ( 1, 3, 'Avec plaisir !', 0, NULL, '2025-10-14 10:35:00'),
+    ( 2, 3, 'Rendez-vous en ligne à 19h.', 1, '2025-10-13 17:45:00', '2025-10-13 17:40:00'),
+    ( 3, 2, 'OK, je serai là.', 0, NULL, '2025-10-14 10:40:00'),
+    ( 1, 2, 'Bonne chance pour le tournoi !', 1, '2025-10-14 08:00:00', '2025-10-14 07:50:00'),
+    ( 2, 1, 'Merci, à toi aussi !', 0, NULL, '2025-10-14 09:37:00');
 
-INSERT INTO messagerie_privee(msg_id, user_sender_id, user_receiver_id, msg, is_read, read_at, created_at) 
-VALUES(21, 5, 4, 'mec on lance une game?', 1, '2025-10-14 09:15:00', '2025-10-14 09:00:00'),
-    (22, 4, 5, 'cest parti lance', 1, '2025-10-14 09:17:00', '2025-10-14 09:05:00'),
+INSERT INTO messagerie_privee( user_sender_id, user_receiver_id, msg, is_read, read_at, created_at) 
+VALUES( 5, 4, 'mec on lance une game?', 1, '2025-10-14 09:15:00', '2025-10-14 09:00:00'),
+    ( 4, 5, 'cest parti lance', 1, '2025-10-14 09:17:00', '2025-10-14 09:05:00'),
 
 UPDATE messagerie_privee
 SET msg="XD ON LANCE"
