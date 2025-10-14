@@ -1,25 +1,25 @@
 
 ---/TABLES/---
     --Table utilisateur--
-    CREATE TABLE utilisateur(
-        id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-        Pseudo VARCHAR(256) NOT NULL,
-        EMAIL VARCHAR(256) NOT NULL,
-        MDP VARCHAR(256) NOT NULL,
-        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-        PRIMARY KEY(id)
-    )
+CREATE TABLE utilisateur(
+     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+     Pseudo VARCHAR(256) NOT NULL,
+     EMAIL VARCHAR(256) NOT NULL,
+     MDP VARCHAR(256) NOT NULL,
+     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+     PRIMARY KEY(id)
+)
     --FIN Table utilisateur--
     --Table score--
-    CREATE TABLE score(
-        id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-        user_id INT UNSIGNED NOT NULL,
-        game_id INT UNSIGNED NOT NULL,
-        difficulty ENUM('1','2','3'),
-        score TIME,
-        created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-        PRIMARY KEY(id)
-    )
+CREATE TABLE score(
+     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+     user_id INT UNSIGNED NOT NULL,
+     game_id INT UNSIGNED NOT NULL,
+     difficulty ENUM('1','2','3'),
+     score TIME,
+     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id)
+)
     --FIN Table score--
     --Table msg--
 CREATE TABLE msg(
