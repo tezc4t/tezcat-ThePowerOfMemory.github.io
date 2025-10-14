@@ -11,7 +11,7 @@
     )
     --FIN Table utilisateur--
     --Table score--
-    CREATE TABLE scores(
+    CREATE TABLE score(
         id INT UNSIGNED NOT NULL AUTO_INCREMENT,
         user_id INT UNSIGNED NOT NULL,
         game_id INT UNSIGNED NOT NULL,
