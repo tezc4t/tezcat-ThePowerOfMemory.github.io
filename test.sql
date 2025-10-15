@@ -16,7 +16,7 @@ CREATE TABLE scores(
      user_id INT UNSIGNED NOT NULL,
      game_id INT UNSIGNED NOT NULL,
      difficulty ENUM('1','2','3'),
-     score TIME,
+     score VARCHAR(50),
      created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(id)
 )
@@ -169,10 +169,10 @@ ORDER BY difficulty, score;
 
 -- Mise a jour d'un score d'un joueur--
 INSERT INTO score(user_id,game_id,difficulty,score)
-VALUES(1,1,"3","00:00:38");
+VALUES(1,1,"3","38");
 
 UPDATE score
-SET score = "00:00:30"
+SET score = "30"
 WHERE user_id = 1
 
 --STORY 15--
