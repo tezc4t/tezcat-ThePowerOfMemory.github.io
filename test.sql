@@ -202,3 +202,27 @@ LEFT JOIN scores ON M.month = MONTH(scores.created_at)
 LEFT JOIN utilisateur ON scores.user_id = utilisateur.id
 LEFT JOIN jeu ON game_id = jeu.id
 GROUP BY month
+
+--STORY 16--
+SELECT ("2025") as year, 
+M.month,
+COUNT(scores.score) as "Total parties",
+(SELECT name 
+ FROM jeu 
+ WHERE COUNT(scores.score) = (SELECT MAX(COUNT(scores.score)))) as "Jeu le plus joué",
+(SELECT AVG(score) 
+ FROM scores 
+ WHERE user_id = 2 
+ AND MONTH(created_at) = M.month 
+ AND difficulty = (SELECT MAX(difficulty) FROM scores 
+                   WHERE MONTH(created_at) = M.month )) as "Score moyen"
+FROM (
+	SELECT 1 as month UNION SELECT 2 as month UNION SELECT 3 as month UNION SELECT 4 as month UNION 
+    SELECT 5 as month UNION SELECT 6 as month UNION SELECT 7 as month UNION SELECT 8 as month UNION 
+    SELECT 9 as month UNION SELECT 10 as month UNION SELECT 11 as month UNION SELECT 12 as month
+) as M
+LEFT JOIN scores ON M.month = MONTH(scores.created_at)
+LEFT JOIN utilisateur ON scores.user_id = utilisateur.id
+LEFT JOIN jeu ON game_id = jeu.id
+WHERE user_id ="2"
+GROUP BY month
