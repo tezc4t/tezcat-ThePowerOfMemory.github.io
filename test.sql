@@ -11,7 +11,7 @@ CREATE TABLE utilisateur(
 )
     --FIN Table utilisateur--
     --Table score--
-CREATE TABLE score(
+CREATE TABLE scores(
      id INT UNSIGNED NOT NULL AUTO_INCREMENT,
      user_id INT UNSIGNED NOT NULL,
      game_id INT UNSIGNED NOT NULL,
@@ -50,7 +50,7 @@ VALUES('tezcat','tezcat.auguste@gmail.com','tezcat'),
     
     --FIN utilisateurs--
     --scores--
-INSERT INTO score (user_id, game_id, difficulty, score)
+INSERT INTO scores (user_id, game_id, difficulty, score)
 Values(5,1,'3',48),(2,1,'2',35)
     --FIN scores--
     --messages--
@@ -160,7 +160,7 @@ ORDER BY created_att DESC
     
 -- Recherche de score par pseudo --
 SELECT nom_du_jeu, user_id, difficulty, score, created_at
-FROM score JOIN utilisateur ON score.user_id = utilisateur.id
+FROM scores JOIN utilisateur ON scores.user_id = utilisateur.id
 JOIN jeu ON jeu.id = score.game_id
 WHERE user_id LIKE '%%'
 ORDER BY difficulty, score;
