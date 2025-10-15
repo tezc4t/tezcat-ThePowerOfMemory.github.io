@@ -150,13 +150,15 @@ WHERE id = 21;
 DELETE FROM messagerie_privee
 WHERE id=21
 
-    
-SELECT msg,created_at 
-FROM messagerie_privee 
-JOIN utilisateur ON utilisateur.id=message_privee.user_sender_id
-WHERE uder_sender_id = 1  AND user_receiver_id= 2
-ORDER BY created_att DESC 
-
+ ----STORY 13(repsecte le "afin de "mais pas le "je veux que"-----------------   
+SELECT us1.Pseudo AS sender, us2.Pseudo AS receiver,mp.msg, mp.created_at
+FROM messagerie_privee  mp 
+JOIN utilisateur us1 ON mp.user_sender_id = us1.id 
+JOIN utilisateur us2 ON mp.user_receiver_id = us2.id
+WHERE (user_sender_id =1 AND user_receiver_id=2 )
+OR (user_sender_id =2 AND user_receiver_id=1 )
+ORDER BY created_at DESC LIMIT 1
+-------------------------------
     
 -- Recherche de score par pseudo --
 SELECT nom_du_jeu, user_id, difficulty, score, created_at
