@@ -94,49 +94,7 @@ SELECT id FROM utilisateur
 WHERE EMAIL = '...' AND MDP = '...'
     ---FIN id utilisateur < email + mdp---
 ---/FIN SELECTION D'ELEMENTS/---
----MSG PRIVEE et données de test kyllian------
-        
-CREATE TABLE messagerie_privee (
-    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    msg_id INT UNSIGNED NOT NULL,
-    user_sender_id INT UNSIGNED NOT NULL,
-    user_receiver_id INT UNSIGNED NOT NULL,
-    msg TEXT NOT NULL,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    is_read TINYINT(1) DEFAULT 0,
-    read_at DATETIME NULL,
-    PRIMARY KEY (id)
-)
 
--- Insertion des messages avec NOW() pour les dates
-INSERT INTO messagerie_privee (user_sender_id, user_receiver_id, msg, is_read, read_at, created_at) 
-VALUES
-  (1, 2, 'Salut, comment ça va ?', 1, NOW(), NOW()),
-  (2, 1, 'Ça va bien, merci ! Et toi ?', 1, NOW(), NOW()),
-  (1, 3, 'Tu viens au jeu ce soir ?', 0, NULL, NOW()),
-  (3, 1, 'Oui, à quelle heure ?', 0, NULL, NOW()),
-  (2, 3, 'Nouveau niveau débloqué!', 1, NOW(), NOW()),
-  (3, 2, 'Bravo pour ton score !', 0, NULL, NOW()),
-  (1, 2, 'On se retrouve demain ?', 0, NULL, NOW()),
-  (2, 1, 'Oui, à 20h !', 1, NOW(), NOW()),
-  (3, 1, 'J’ai besoin d’aide sur ce niveau.', 1, NOW(), NOW()),
-  (1, 3, 'Pas de problème, je t’aide.', 0, NULL, NOW()),
-  (2, 3, 'Tu as vu la mise à jour ?', 0, NULL, NOW()),
-  (3, 2, 'Oui, c’est top !', 1, NOW(), NOW()),
-  (1, 2, 'Quel est ton meilleur score ?', 0, NULL, NOW()),
-  (2, 1, 'Je crois que c’est 3000 points.', 1, NOW(), NOW()),
-  (3, 1, 'On fait une équipe ?', 0, NULL, NOW()),
-  (1, 3, 'Avec plaisir !', 0, NULL, NOW()),
-  (2, 3, 'Rendez-vous en ligne à 19h.', 1, NOW(), NOW()),
-  (3, 2, 'OK, je serai là.', 0, NULL, NOW()),
-  (1, 2, 'Bonne chance pour le tournoi !', 1, NOW(), NOW()),
-  (2, 1, 'Merci, à toi aussi !', 0, NULL, NOW());
-
--- Insertion des messages supplémentaires (sans msg_id)
-INSERT INTO messagerie_privee (user_sender_id, user_receiver_id, msg, is_read, read_at, created_at)
-VALUES
-  (4, 5, 'mec on lance une game?', 1, NOW(), NOW()),
-  (5, 4, 'cest parti lance', 1, NOW(), NOW());
 
 --STORY 6--
 SELECT nom_du_jeu,
@@ -167,6 +125,53 @@ FROM msg JOIN utilisateur ON user_id = utilisateur.id
 WHERE msg.created_at >= NOW() - INTERVAL 1 DAY
  ORDER BY created_at ASC;
 -----------------------------------------------------------
+
+	
+---(STORY 11) kyllian------
+        
+CREATE TABLE messagerie_privee (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    msg_id INT UNSIGNED NOT NULL,
+    user_sender_id INT UNSIGNED NOT NULL,
+    user_receiver_id INT UNSIGNED NOT NULL,
+    msg TEXT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    is_read TINYINT(1) DEFAULT 0,
+    read_at DATETIME NULL,
+    PRIMARY KEY (id)
+)
+
+-- STRY 12 (Insertion des messages avec NOW() pour les dates)
+INSERT INTO messagerie_privee (user_sender_id, user_receiver_id, msg, is_read, read_at, created_at) 
+VALUES
+  (1, 2, 'Salut, comment ça va ?', 1, NOW(), NOW()),
+  (2, 1, 'Ça va bien, merci ! Et toi ?', 1, NOW(), NOW()),
+  (1, 3, 'Tu viens au jeu ce soir ?', 0, NULL, NOW()),
+  (3, 1, 'Oui, à quelle heure ?', 0, NULL, NOW()),
+  (2, 3, 'Nouveau niveau débloqué!', 1, NOW(), NOW()),
+  (3, 2, 'Bravo pour ton score !', 0, NULL, NOW()),
+  (1, 2, 'On se retrouve demain ?', 0, NULL, NOW()),
+  (2, 1, 'Oui, à 20h !', 1, NOW(), NOW()),
+  (3, 1, 'J’ai besoin d’aide sur ce niveau.', 1, NOW(), NOW()),
+  (1, 3, 'Pas de problème, je t’aide.', 0, NULL, NOW()),
+  (2, 3, 'Tu as vu la mise à jour ?', 0, NULL, NOW()),
+  (3, 2, 'Oui, c’est top !', 1, NOW(), NOW()),
+  (1, 2, 'Quel est ton meilleur score ?', 0, NULL, NOW()),
+  (2, 1, 'Je crois que c’est 3000 points.', 1, NOW(), NOW()),
+  (3, 1, 'On fait une équipe ?', 0, NULL, NOW()),
+  (1, 3, 'Avec plaisir !', 0, NULL, NOW()),
+  (2, 3, 'Rendez-vous en ligne à 19h.', 1, NOW(), NOW()),
+  (3, 2, 'OK, je serai là.', 0, NULL, NOW()),
+  (1, 2, 'Bonne chance pour le tournoi !', 1, NOW(), NOW()),
+  (2, 1, 'Merci, à toi aussi !', 0, NULL, NOW());
+
+-- Insertion des messages supplémentaires (sans msg_id)
+INSERT INTO messagerie_privee (user_sender_id, user_receiver_id, msg, is_read, read_at, created_at)
+VALUES
+  (4, 5, 'mec on lance une game?', 1, NOW(), NOW()),
+  (5, 4, 'cest parti lance', 1, NOW(), NOW());
+
+
 	
  ----STORY 13(repsecte mais a modifier pour php (valeurs "NOW" sur story 12)-----------------   
 SELECT * FROM `u1` WHERE SELECT u1.pseudo AS sender, u2.pseudo AS receiver,
@@ -180,6 +185,30 @@ GROUP BY conversation, u1.pseudo, u2.pseudo,
  p.msg, p.created_at 
 ORDER BY p.created_at DESC
 -------------------------------
+-----STORY 14----------------
+SELECT 
+  s.Pseudo AS Expediteur,
+  r.Pseudo AS Recepteur,
+  mp.Msg,
+  mp.created_at,
+  mp.read_at,
+  mp.is_read,
+  mp.user_sender_id,
+  mp.user_receiver_id,
+  (SELECT COUNT(*) FROM Score sc WHERE sc.user_id = mp.user_sender_id) AS NbPartiesExp,
+  (SELECT COUNT(*) FROM Score sc WHERE sc.user_id = mp.user_receiver_id) AS NbPartiesRec,
+  (SELECT j.nom_du_jeu FROM Score sc JOIN Jeu j ON j.Id = sc.game_id 
+   WHERE sc.user_id = mp.user_sender_id GROUP BY j.Id, j.nom_du_jeu ORDER BY COUNT(*) DESC LIMIT 1) AS Jeupjouee,
+  (SELECT j.nom_du_jeu FROM Score sc JOIN Jeu j ON j.Id = sc.game_id 
+   WHERE sc.user_id = mp.user_receiver_id GROUP BY j.Id, j.nom_du_jeu ORDER BY COUNT(*) DESC LIMIT 1) AS JeuRecent
+FROM messagerie_privee mp
+JOIN Utilisateur s ON s.Id = mp.user_sender_id
+JOIN Utilisateur r ON r.Id = mp.user_receiver_id
+WHERE (mp.user_sender_id = 1 AND mp.user_receiver_id = 2)
+   OR (mp.user_sender_id = 2 AND mp.user_receiver_id = 1)
+ORDER BY mp.created_at ASC;
+
+--------------fin story 14--------------------------
     
 -- Recherche de score par pseudo --
 SELECT nom_du_jeu, user_id, difficulty, score, created_at
