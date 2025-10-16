@@ -174,7 +174,7 @@ VALUES
 
 	
  ----STORY 13-----------------   
-SELECT * FROM `u1` WHERE SELECT u1.pseudo AS sender, u2.pseudo AS receiver,
+SELECT u1.pseudo AS sender, u2.pseudo AS receiver,
  p.msg, p.created_at,
 user_sender_id + user_receiver_id AS conversation 
 FROM messagerie_privee p 
