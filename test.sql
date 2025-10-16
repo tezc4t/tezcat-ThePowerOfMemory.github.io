@@ -145,7 +145,21 @@ WHERE id = 21;
 
 DELETE FROM messagerie_privee
 WHERE id=21
+--STORY 10------------------------------------------------
 
+SELECT 
+    message,
+    Pseudo,
+    msg.created_at,
+    CASE 
+        WHEN user_id = 1 THEN TRUE 
+        ELSE FALSE 
+    END AS isSender
+FROM msg JOIN utilisateur ON user_id = utilisateur.id
+WHERE msg.created_at >= NOW() - INTERVAL 1 DAY
+ ORDER BY created_at ASC;
+-----------------------------------------------------------
+	
  ----STORY 13(repsecte le "afin de "mais pas le "je veux que"-----------------   
 SELECT us1.Pseudo AS sender, us2.Pseudo AS receiver,mp.msg, mp.created_at
 FROM messagerie_privee  mp 
@@ -222,3 +236,4 @@ LEFT JOIN utilisateur ON scores.user_id = utilisateur.id
 LEFT JOIN jeu ON game_id = jeu.id
 WHERE user_id ="2"
 GROUP BY month
+
