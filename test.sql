@@ -168,14 +168,17 @@ WHERE msg.created_at >= NOW() - INTERVAL 1 DAY
  ORDER BY created_at ASC;
 -----------------------------------------------------------
 	
- ----STORY 13(repsecte le "afin de "mais pas le "je veux que"-----------------   
-SELECT us1.Pseudo AS sender, us2.Pseudo AS receiver,mp.msg, mp.created_at
-FROM messagerie_privee  mp 
-JOIN utilisateur us1 ON mp.user_sender_id = us1.id 
-JOIN utilisateur us2 ON mp.user_receiver_id = us2.id
-WHERE (user_sender_id =1 AND user_receiver_id=2 )
-OR (user_sender_id =2 AND user_receiver_id=1 )
-ORDER BY created_at DESC LIMIT 1
+ ----STORY 13(repsecte mais a modifier pour php (valeurs "NOW" sur story 12)-----------------   
+SELECT * FROM `u1` WHERE SELECT u1.pseudo AS sender, u2.pseudo AS receiver,
+ p.msg, p.created_at,
+user_sender_id + user_receiver_id AS conversation 
+FROM messagerie_privee p 
+JOIN utilisateur u1 ON p.user_sender_id = u1.id
+JOIN utilisateur u2 ON p.user_receiver_id = u2.id
+WHERE user_sender_id =1 OR user_receiver_id=1
+GROUP BY conversation, u1.pseudo, u2.pseudo,
+ p.msg, p.created_at 
+ORDER BY p.created_at DESC
 -------------------------------
     
 -- Recherche de score par pseudo --
