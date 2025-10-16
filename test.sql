@@ -195,9 +195,9 @@ SELECT
   mp.is_read,
   mp.user_sender_id,
   mp.user_receiver_id,
-  (SELECT COUNT(*) FROM Score sc WHERE sc.user_id = mp.user_sender_id) AS NbPartiesExp,
-  (SELECT COUNT(*) FROM Score sc WHERE sc.user_id = mp.user_receiver_id) AS NbPartiesRec,
-  (SELECT j.nom_du_jeu FROM Score sc JOIN Jeu j ON j.Id = sc.game_id 
+  (SELECT COUNT(*) FROM Scores sc WHERE sc.user_id = mp.user_sender_id) AS NbPartiesExp,
+  (SELECT COUNT(*) FROM Scores sc WHERE sc.user_id = mp.user_receiver_id) AS NbPartiesRec,
+  (SELECT j.nom_du_jeu FROM Scores sc JOIN Jeu j ON j.Id = sc.game_id 
    WHERE sc.user_id = mp.user_sender_id GROUP BY j.Id, j.nom_du_jeu ORDER BY COUNT(*) DESC LIMIT 1) AS Jeupjouee,
   (SELECT j.nom_du_jeu FROM Score sc JOIN Jeu j ON j.Id = sc.game_id 
    WHERE sc.user_id = mp.user_receiver_id GROUP BY j.Id, j.nom_du_jeu ORDER BY COUNT(*) DESC LIMIT 1) AS JeuRecent
