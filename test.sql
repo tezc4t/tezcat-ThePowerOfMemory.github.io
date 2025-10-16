@@ -210,7 +210,7 @@ WHERE score = (SELECT DISTINCT score FROM scores WHERE MONTH(scores.created_at) 
 ORDER BY score ASC LIMIT 1 OFFSET 2) 
 AND MONTH(scores.created_at) = M.month LIMIT 1) as "Top 3",
 COUNT(scores.score) as "Total parties",
-(SELECT name FROM jeu WHERE COUNT(scores.score) = (SELECT MAX(COUNT(scores.score)))) as "Jeu le plus joué"
+(SELECT nom_du_jeu FROM jeu WHERE COUNT(scores.score) = (SELECT MAX(COUNT(scores.score)))) as "Jeu le plus joué"
 FROM (
 	SELECT 1 as month UNION SELECT 2 as month UNION SELECT 3 as month UNION SELECT 4 as month UNION 
     SELECT 5 as month UNION SELECT 6 as month UNION SELECT 7 as month UNION SELECT 8 as month UNION 
@@ -225,7 +225,7 @@ GROUP BY month
 SELECT ("2025") as year, 
 M.month,
 COUNT(scores.score) as "Total parties",
-(SELECT name 
+(SELECT nom_du_jeu 
  FROM jeu 
  WHERE COUNT(scores.score) = (SELECT MAX(COUNT(scores.score)))) as "Jeu le plus joué",
 (SELECT AVG(score) 
