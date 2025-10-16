@@ -94,10 +94,6 @@ SELECT id FROM utilisateur
 WHERE EMAIL = '...' AND MDP = '...'
     ---FIN id utilisateur < email + mdp---
 ---/FIN SELECTION D'ELEMENTS/---
-INSERT INTO msg (game_id,user_id,Commentaire text)
-VALUES(Power_of_Memory,1,"gg" )
-
-
 ---MSG PRIVEE et données de test kyllian------
         
 CREATE TABLE messagerie_privee (
