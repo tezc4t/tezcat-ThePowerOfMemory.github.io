@@ -138,6 +138,14 @@ VALUES
   (4, 5, 'mec on lance une game?', 1, NOW(), NOW()),
   (5, 4, 'cest parti lance', 1, NOW(), NOW());
 
+--STORY 6--
+SELECT nom_du_jeu,
+pseudo,
+difficulty,
+score,
+scores.created_at
+FROM scores JOIN utilisateur ON user_id = utilisateur.id JOIN jeu ON game_id = jeu.id
+ORDER BY nom_du_jeu, difficulty DESC, score
 -- Mise à jour d’un message
 UPDATE messagerie_privee
 SET msg = 'XD ON LANCE'
