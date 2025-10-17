@@ -165,6 +165,20 @@ VALUES
   (1, 2, 'Bonne chance pour le tournoi !', 1, NOW(), NOW()),
   (2, 1, 'Merci, à toi aussi !', 0, NULL, NOW());
 
+INSERT INTO messagerie_privee (user_sender_id, user_receiver_id, msg, is_read, read_at, created_at)
+VALUES
+    (4, 5, 'mec on lance une game?', 1, NOW(), NOW()),
+    (5, 4, 'cest parti lance', 1, NOW(), NOW());
+
+UPDATE messagerie_privee
+SET msg = 'XD ON LANCE'
+WHERE id =20
+
+DELETE FROM messagerie_privee
+WHERE id = 20;
+
+
+
 -- Insertion des messages supplémentaires (sans msg_id)
 INSERT INTO messagerie_privee (user_sender_id, user_receiver_id, msg, is_read, read_at, created_at)
 VALUES
