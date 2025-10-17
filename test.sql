@@ -49,6 +49,11 @@ VALUES('tezcat','tezcat.auguste@gmail.com','tezcat'),
     ('Random','random.random@truc.fr','sjhfsIHO87§6');
     
     --FIN utilisateurs--
+----Story 4------
+UPDATE utilisateur 
+SET MDP= "CHANGEE"
+WHERE id= 1; 
+----------------------
     --scores--
 INSERT INTO scores (user_id, game_id, difficulty, score)
 Values(5,1,'3',48),(2,1,'2',35)
