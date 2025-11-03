@@ -3,11 +3,10 @@
 
 <html lang="fr">
 <?php
-$title = "Index";
-$cssFile = "styles.css"; // Feuille de style principale
-include 'partials/head.php'; // inclusion du <head>
+$title = "html contact";
+$cssFile = "contact.css"; // Feuille de style principale
+include 'partials/head_html contact.php'; // inclusion du <head>
 include 'partials/header.php'; // inclusion du header
-include 'partials/footer.php'; // inclusion du footer
 ?>
 
 <body>
@@ -81,6 +80,10 @@ include 'partials/footer.php'; // inclusion du footer
         <button type="submit">Envoyer</button>
     </form>
     </section>
+</body>
+<?php
+include 'partials/footer.php'; // inclusion du footer
+?>
     
 </html>
 

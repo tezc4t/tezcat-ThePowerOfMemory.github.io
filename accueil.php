@@ -4,10 +4,9 @@
 <?php
 
 $title = "Accueil";
-$cssFile = "acceuil.css"; // Feuille de style principale
-include 'partials/head.php'; // inclusion du <head>
+$cssFile ="acceuil.css"; // Feuille de style principale
+include 'partials/head_accueil.php'; // inclusion du <head>
 include 'partials/header.php'; // inclusion du header
-include 'partials/footer.php'; // inclusion du footer
 ?>
 
 
@@ -180,5 +179,8 @@ include 'partials/footer.php'; // inclusion du footer
         </table>
     </div>
 </body>
-   
+<?php
+include 'partials/footer.php'; // inclusion du footer   
+?>  
 </html>
+s

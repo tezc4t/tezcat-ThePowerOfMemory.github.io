@@ -9,7 +9,7 @@
     
 
     <!-- Feuille de style principale -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="acceuil.css">
 
     <!-- Feuille de style spécifique à la page (optionnelle) -->
     <?php if (!empty($custom_css)): ?>
