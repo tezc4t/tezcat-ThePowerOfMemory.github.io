@@ -5,11 +5,11 @@ B1 student project at the request of a Products Owners :<br> M. Frédéric LEFEV
 
 => first week : Flash HTML / CSS (COMPLETED)<br>
 => first deadline : 03/10/25<br>
-=> Second Week : Flash BDD SQL (COMPLETED) <br>
+=> Second Week : Flash BDD SQL (NOW) <br>
 => Second deadline : 18/10/25<br>
-=> third Week : Flash PHP  (NOW) <br>
+=> third Week : Flash PHP / JS <br>
 => third deadline : 08/11/25<br>
-=> last Week: Flash  JS  <br>
+=> last Week: ?? <br>
 => last deadline: ??<br>
 
 Missing: 
