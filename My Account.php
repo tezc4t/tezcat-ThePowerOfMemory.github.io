@@ -1,12 +1,6 @@
 <!DOCTYPE html><!--- Define the page as a html web page--->
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"><!---Link the html with the css of this page --->
-    <title>The power of memory</title><!---Give the  title the power  of memory to the web site --->
-
-</head>
+<link rel="stylesheet" href="My Account.css">
 <body>
     <div class="all" >
         <a href="accueil.html" ><button id="AC"><img src="img/buttonhome.jpg"></button></a><!---Create a button that when cliked, send the user on the accueil page --->
