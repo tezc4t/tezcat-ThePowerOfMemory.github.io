@@ -3,26 +3,9 @@
 <link rel="stylesheet" href="scores.css" type="text/css" ><!---link scores.html to scores.css--->
 
 <html lang="fr">
-<head><!--- Define the head-->
-        <meta charset="utf-8">
-        <title>The power of memory</title>
-    </head>
-    
+  
     <body>
-        <header><!---Define Header with the panel button for redirection --->
-            <div class="header-container">
-                <p>
-                    <a href="index.html"><!---redirection to login(index.html)--->
-                        <img src="img/LOGOS.png" alt="logo">  
-                     </a>
-                 </p>
-                <nav class="menu">
-                    <a id="acceuil" href="accueil.html">Accueil</a><!--- 3  redirections-->
-                    <a id="scores" href="scores.html">Scores</a>
-                    <a id="contact" href="html contact.html" >Nous contacter</a>
-                </nav>
-            </div>
-        </header>!--- Define a class for h1 and p on the top center--->
+        
         <div class="intro-jeu">
             <h1>Score Of The Power of Memory</h1>
             <p>Tentez de battre nos meilleurs joueurs avec le moins de temps possible !</p>
