@@ -9,8 +9,7 @@
     
 
     <!-- Feuille de style principale -->
-    <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="Game/Memory/Scores.css">
+    <link rel="stylesheet" href="Game/memory/pagejeux.css">
 
     <!-- Feuille de style spécifique à la page (optionnelle) -->
     <?php if (!empty($custom_css)): ?>

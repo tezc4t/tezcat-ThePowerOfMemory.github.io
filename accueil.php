@@ -4,7 +4,7 @@
 <?php
 
 $title = "Accueil";
-$cssFile ="acceuil.css"; // Feuille de style principale
+$cssFile ="Game/memory/acceuil.css"; // Feuille de style principale
 include 'partials/head_accueil.php'; // inclusion du <head>
 include 'partials/header.php'; // inclusion du header
 ?>
@@ -23,7 +23,7 @@ include 'partials/header.php'; // inclusion du header
             découvrez Power Of Mémory, un jeu inspiré du jeu de carte mémory.
         </p>
         <button type="Button" id="bouton-commencer">
-            <a href="pagejeux.html"><figcaption> Commencer !</figcaption></a> 
+            <a href="Game/memory/pagejeux.php"><figcaption> Commencer !</figcaption></a> 
         </button>
     </div>
     <div id="div2">
