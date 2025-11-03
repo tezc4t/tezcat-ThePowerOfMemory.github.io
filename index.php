@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--- Define the page as a html web page--->
 <html lang="fr">
-<link rel="stylesheet" href="style.css">
+<?php include('partials/head.php')?>
 <body>
     <div class="all" >
         <a href="accueil.html" ><button id="AC"><img src="img/buttonhome.jpg"></button></a><!---define home button--->
