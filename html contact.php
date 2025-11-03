@@ -2,7 +2,7 @@
 
 
 <html lang="fr">
-    
+<link rel="stylesheet" href="html contact.css"> 
 <body>
     <h1 id="titremain">Où sommes nous</h1>
     <p>nous nous trouvons dans plusieurs sites dans le monde</p>

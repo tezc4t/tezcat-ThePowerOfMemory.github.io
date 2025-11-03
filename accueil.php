@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="fr">
- 
+<link rel="stylesheet" href="accueil.css">
     <body>
         
         <div id="div1">
