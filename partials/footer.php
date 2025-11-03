@@ -6,9 +6,9 @@
         </div>
         <div class="footer2">
             <h4>menu</h4>
-            <a href="acceuil.html">Accueil</a>
-            <a href="scores.html">Scores</a>
-            <a href="html contact.html">contact</a>
+            <a href="acceuil.php">Accueil</a>
+            <a href="scores.php">Scores</a>
+            <a href="html contact.php">contact</a>
         </div>
         <div class="footer3">
             <h4>Contactez-nous</h4>

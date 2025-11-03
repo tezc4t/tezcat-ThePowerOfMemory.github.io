@@ -6,10 +6,10 @@
             </a>
         </p>
         <nav class="menu">
-            <a id="acceuil" href="index.html">Accueil</a>
-            <a id="scores" href="scores.html">Scores</a>
-            <a id="Profil" href="ACS.html">Profil</a>
-            <a href="html contact.html" id="contact">Nous contacter</a>
+            <a id="acceuil" href="index.php">Accueil</a>
+            <a id="scores" href="scores.php">Scores</a>
+            <a id="Profil" href="ACS.php">Profil</a>
+            <a href="html contact.php" id="contact">Nous contacter</a>
         </nav>
     </div>
 </header>

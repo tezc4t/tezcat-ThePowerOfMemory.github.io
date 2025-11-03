@@ -1,5 +1,12 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="pagejeux.css" type="text/css" >
+<?php
+$title = "Index";
+$cssFile = "styles.css"; // Feuille de style principale
+include 'partials/head.php'; // inclusion du <head>
+include 'partials/header.php'; // inclusion du header
+include 'partials/footer.php'; // inclusion du footer
+?>
+
 
 <html>
     <head>

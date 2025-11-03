@@ -2,7 +2,14 @@
 
 
 <html lang="fr">
-<link rel="stylesheet" href="html contact.css"> 
+<?php
+$title = "Index";
+$cssFile = "styles.css"; // Feuille de style principale
+include 'partials/head.php'; // inclusion du <head>
+include 'partials/header.php'; // inclusion du header
+include 'partials/footer.php'; // inclusion du footer
+?>
+
 <body>
     <h1 id="titremain">Où sommes nous</h1>
     <p>nous nous trouvons dans plusieurs sites dans le monde</p>

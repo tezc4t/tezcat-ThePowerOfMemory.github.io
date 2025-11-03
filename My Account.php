@@ -1,11 +1,15 @@
 <!DOCTYPE html><!--- Define the page as a html web page--->
 <html lang="fr">
-<link rel="stylesheet" href="My Account.css">
+<?php
+$title = "Index";
+$cssFile = "styles.css"; // Feuille de style principale
+include 'partials/head.php';
+?>
 <body>
     <div class="all" >
-        <a href="accueil.html" ><button id="AC"><img src="img/buttonhome.jpg"></button></a><!---Create a button that when cliked, send the user on the accueil page --->
-        <a href="index.html"><button id="home"><img src="img/buttonprofil.jpg"></button></a><!---Create a button that when cliked, send the user on the home page--->
-        <a href="inscription.html"><button id="INSCR"><img src="img/buttonprofil.jpg"></button></a><!---Create a button that when cliked, send the user on the inscription page--->
+        <a href="accueil.php" ><button id="AC"><img src="img/buttonhome.jpg"></button></a><!---Create a button that when cliked, send the user on the accueil page --->
+        <a href="index.php"><button id="home"><img src="img/buttonprofil.jpg"></button></a><!---Create a button that when cliked, send the user on the home page--->
+        <a href="inscription.php"><button id="INSCR"><img src="img/buttonprofil.jpg"></button></a><!---Create a button that when cliked, send the user on the inscription page--->
         <div class="container" >
             <header>
                 <h1 id="titremain">Un Trou de mémoire?</h1>

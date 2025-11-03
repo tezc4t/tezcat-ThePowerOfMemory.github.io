@@ -1,4 +1,17 @@
+<!-- head.php -->
 <head>
-    <meta charset="utf-8">
-    <title>The power of memory</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Titre dynamique -->
+    <title><?= $title ?? "Power Of Memory" ?></title>
+
+
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Feuille de style spécifique à la page (optionnelle) -->
+    <?php if (!empty($custom_css)): ?>
+        <link rel="stylesheet" href="<?= $custom_css ?>">
+    <?php endif; ?>
 </head>

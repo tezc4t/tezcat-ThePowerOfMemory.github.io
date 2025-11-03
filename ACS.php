@@ -3,7 +3,14 @@
 <!DOCTYPE html>
 
 <html lang="fr">
-<link rel="stylesheet" href="ACS.css">
+<?php
+$title = "Index";
+$cssFile = "ACS.css"; // Feuille de style principale
+include 'partials/head.php'; // inclusion du <head>
+include 'partials/header.php'; // inclusion du header
+include 'partials/footer.php'; // inclusion du footer
+?>
+
 
     <body>
         <div class="container">
@@ -11,8 +18,8 @@
 
             <div class="account-info">
                 <h2>Informations actuelles</h2>
-                <p><strong>Nom :</strong> Jean Dupont</p>
-                <p><strong>Email :</strong> jean.dupont@email.com</p>
+                <p><strong>Nom :</strong> Kyllian Nouh</p>
+                <p><strong>Email :</strong> Kyllian.Nouh@gmail.com</p>
             </div>
 
             <form class="account-form">
