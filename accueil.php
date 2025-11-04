@@ -6,7 +6,6 @@
 
 <head>
     <link rel="stylesheet" href="acceuil.css">
-    <link rel="stylesheet" href="header.css">
     <?php include 'partials/head.php'; ?>
 </head>
 
