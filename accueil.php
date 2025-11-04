@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 
 <html lang="fr">
-<?php
+<!DOCTYPE html>
+<html lang="fr">
 
-$title = "Accueil";
-$cssFile ="Game/memory/acceuil.css"; // Feuille de style principale
-include 'partials/head_accueil.php'; // inclusion du <head>
-include 'partials/header.php'; // inclusion du header
-?>
+<head>
+    <link rel="stylesheet" href="acceuil.css">
+    <?php include 'partials/head.php'; ?>
+</head>
 
 
 <body>
+<?php include 'partials/header.php'; ?>
         
     <div id="div1">
         <p id="exclu">

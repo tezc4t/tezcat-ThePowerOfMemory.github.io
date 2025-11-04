@@ -2,14 +2,13 @@
 
 
 <html lang="fr">
-<?php
-$title = "Scores";
-$cssFile = "Game/memory/scores.css"; // Feuille de style principale
-include 'partials/head_scores.php'; // inclusion du <head>
-include 'partials/header.php'; // inclusion du header
-?>
-    
+<head>
+    <link rel="stylesheet" href="scores.css">
+    <?php include __DIR__ . '/../../partials/head.php'; ?>
+</head>
+
 <body>
+    <?php include __DIR__ . '/../../partials/header.php'; ?>
         
     <div class="intro-jeu">
         <h1>Score Of The Power of Memory</h1>
@@ -85,7 +84,7 @@ include 'partials/header.php'; // inclusion du header
    
 </body>
 <?php
-include 'partials/footer.php'; // inclusion du footer
+include '../../partials/footer.php'; // inclusion du footer
 ?>
 
 </html>

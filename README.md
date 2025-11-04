@@ -14,7 +14,7 @@ B1 student project at the request of a Products Owners :<br> M. Frédéric LEFEV
 
 Missing: 
 
-=> redo the game interface 
+=> fix scores.php and pagejeux.php
 
 
 

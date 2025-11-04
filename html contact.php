@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 
 
-<html lang="fr">
-<?php
-$title = "html contact";
-$cssFile = "contact.css"; // Feuille de style principale
-include 'partials/head_html contact.php'; // inclusion du <head>
-include 'partials/header.php'; // inclusion du header
-?>
+<head>
+    <link rel="stylesheet" href="contact.css">
+    <?php include 'partials/head.php'; ?>
+</head>
+
 
 <body>
+<?php include 'partials/header.php'; ?>
     <h1 id="titremain">Où sommes nous</h1>
     <p>nous nous trouvons dans plusieurs sites dans le monde</p>
     <img src="img/map.png" class="carte-centree" />

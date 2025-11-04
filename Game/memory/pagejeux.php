@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 
 
-<?php
-$title = "Index";
-$cssFile = "Game/memory/pagejeux.css"; // Feuille de style principale
-include 'partials/head_pagejeux.php'; // inclusion du <head>
-include 'partials/header.php'; // inclusion du header
-?>
-   
-    
+<head>
+    <link rel="stylesheet" href="pagejeux.css">
+
+    <?php include '../../partials/head.php'; ?>
+</head>
+
+
 <body>
+<?php include '../../partials/header.php'; ?>
         
     <div class="intro-jeu">
         <h1>Bienvenue dans The Power of Memory</h1>
@@ -83,7 +83,7 @@ include 'partials/header.php'; // inclusion du header
         
 </body>
 <?php
-include 'partials/footer.php'; // inclusion du footer
+include '../../partials/footer.php'; // inclusion du footer
 ?>
     
 </html>
