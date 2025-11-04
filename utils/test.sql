@@ -45,8 +45,8 @@ VALUES (1, 'Power Of Memory');
 
 INSERT INTO score (user_id, game_id, difficulty, score)
 VALUES
-    (5, 1, '3', '00:00:48'),
-    (2, 1, '2', '00:00:35');
+    (5, 1, '3', '48'),
+    (2, 1, '2', '35');
 
 INSERT INTO msg (game_id, user_id, message)
 VALUES
