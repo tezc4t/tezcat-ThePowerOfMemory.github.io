@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="ACS.css">
     <link rel="stylesheet" href="Game/memory/scores.css">
     <?php include 'partials/head.php'; ?>
+    <?php include 'utils/fonction.php'; ?>
+
 </head>
 
 

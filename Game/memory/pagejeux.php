@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="pagejeux.css">
 
     <?php include '../../partials/head.php'; ?>
+    <?php include '../../utils/fonction.php'; ?>
 </head>
 
 

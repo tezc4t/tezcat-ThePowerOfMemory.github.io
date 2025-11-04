@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="contact.css">
     <?php include 'partials/head.php'; ?>
+    <?php include 'utils/fonction.php'; ?>
 </head>
 
 

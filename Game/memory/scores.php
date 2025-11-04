@@ -5,6 +5,7 @@
 <head>
     <link rel="stylesheet" href="scores.css">
     <?php include __DIR__ . '/../../partials/head.php'; ?>
+    <?php include '../../utils/fonction.php'; ?>
 </head>
 
 <body>

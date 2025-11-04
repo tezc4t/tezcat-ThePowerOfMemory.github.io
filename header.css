@@ -1,12 +1,99 @@
-/* Trait orange sous le lien actif */
-.menu a.active::after {
-    content: "";
+/*start header*/
+/*header background*/
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background-color: rgb(7, 3, 32); /* même fond que ton body */
+  }
+  
+  .logohead {
+    height: 65px;
+  }
+  
+  /* Nav container */
+  .nav-container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+  }
+  
+  /* Liens principaux */
+  .spaceh {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 6px;
+    transition: color 0.3s ease;
+  }
+  
+  /* Barre rouge sous le lien */
+  .spaceh::after {
+    content: '';
     position: absolute;
     left: 0;
-    bottom: 0;
-    width: 100%;
+    bottom: -4px;
+    width: 0%;
     height: 3px;
-    background-color: orange;
-    border-radius: 2px;
-}
-
+    background-color: rgb(255, 0, 0);
+    transition: width 0.3s ease;
+  }
+  
+  /* Effet hover */
+  .spaceh:hover::after {
+    width: 100%;
+  }
+  
+  /* Lien actif : barre visible */
+  .spaceh.active::after {
+    width: 100%;
+  }
+  
+  /* Couleur du texte actif */
+  .spaceh.active {
+    color: rgb(255, 255, 255);
+  }
+  
+  /* "Contact us" bouton style */
+  .button-like {
+    background-color: rgb(255, 0, 47);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Hover sur le bouton */
+  .button-like:hover {
+    background-color: #ff4b4b;
+    transform: scale(1.05);
+  }
+  
+  /* Quand Contact est la page active */
+  .button-like.active {
+    box-shadow: 0 4px 12px rgba(216, 0, 39, 0.4);
+  }
+  
+  /* Responsive : mobile */
+  @media (max-width: 768px) {
+    .main-header {
+      flex-direction: column;
+      padding: 15px;
+      gap: 10px;
+    }
+  
+    .nav-container {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+  
+    .spaceh {
+      font-size: 18px;
+    }
+  }
