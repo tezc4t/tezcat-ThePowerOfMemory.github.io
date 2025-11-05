@@ -4,9 +4,9 @@
 <html lang="fr">
 <?php
 $title = "Scores";
-$cssFile = "Game/memory/scores.css"; // Feuille de style principale
-include 'partials/head_scores.php'; // inclusion du <head>
-include 'partials/header.php'; // inclusion du header
+$cssFile = "scores.css"; // Feuille de style principale
+include '../../partials/head_scores.php'; // inclusion du <head>
+include '../../partials/header.php'; // inclusion du header
 ?>
     
 <body>
@@ -85,7 +85,7 @@ include 'partials/header.php'; // inclusion du header
    
 </body>
 <?php
-include 'partials/footer.php'; // inclusion du footer
+include '../../partials/footer.php'; // inclusion du footer
 ?>
 
 </html>

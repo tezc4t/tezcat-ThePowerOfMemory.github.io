@@ -1,3 +1,5 @@
+<?php require 'utils/functions-scores.php'; ?>
+
 <!DOCTYPE html>
 
 <html lang="fr">
@@ -59,7 +61,7 @@ include 'partials/header.php'; // inclusion du header
         <table id="ligne1">
             <td class="stat" id="stat1">
                 <p class="nb-stat">
-                    310
+                    <?php echo getScore(); ?>
                 </p>
                 <p class="stat-text">
                     Parties Jouées
@@ -67,7 +69,9 @@ include 'partials/header.php'; // inclusion du header
             </td>
             <td class="stat" id="stat2">
                 <p class="nb-stat">
-                    1020
+                    <?php
+                        echo"1020"
+                    ?>
                 </p>
                 <p class="stat-text">
                     Joueurs Connectés
@@ -75,7 +79,9 @@ include 'partials/header.php'; // inclusion du header
             </td>
             <td class="stat" id="stat3">
                 <p class="nb-stat">
-                    10s
+                    <?php
+                        echo lowScore() . "s";
+                    ?>
                 </p>
                 <p class="stat-text">
                     Temps Records
@@ -85,7 +91,9 @@ include 'partials/header.php'; // inclusion du header
         <table id="ligne2">
             <td class="stat" id="stat4">
                 <p class="nb-stat">
-                    9300
+                    <?php
+                        echo nbutilisateur();
+                    ?>
                 </p>
                 <p class="stat-text">
                     Joueurs Inscrits
@@ -93,7 +101,9 @@ include 'partials/header.php'; // inclusion du header
             </td>
             <td class="stat" id="stat5">
                 <p class="nb-stat">
-                    2
+                    <?php
+                        echo nbscorebattu();
+                    ?>
                 </p>
                 <p class="stat-text">
                     Records battu auourd'hui
@@ -183,4 +193,3 @@ include 'partials/header.php'; // inclusion du header
 include 'partials/footer.php'; // inclusion du footer   
 ?>  
 </html>
-s
