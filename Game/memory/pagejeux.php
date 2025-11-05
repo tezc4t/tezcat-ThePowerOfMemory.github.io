@@ -1,361 +1,89 @@
-
-/* =======================================================
-   HEADER
-   ======================================================= */
-   header {
-    position: absolute;        /* Position fixe en haut de la page */
-    top: 0;
-    width: 100%;               /* Largeur totale */
-    display: flex;             /* Organisation en flexbox */
-    align-items: center;       /* Alignement vertical */
-    justify-content: space-between; /* Sépare logo et menu */
-    background-color: #070320; /* Couleur de fond */
-}
-
-.header-container {
-    padding: 0 30px;           /* Espacement interne gauche/droite */
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header img {
-    width: 50px;
-    height: auto;
-    transition: 0.3s ease-in-out; /* Animation fluide */
-    margin: 0px;
-}
-
-header img:hover {
-    transform: scale(1.2);     /* Zoom au survol */
-    rotate: 10deg;             /* Rotation légère */
-}
-
-header .menu {
-    display: flex;
-    gap: 0px;                 /* Espacement entre les liens */
-}
-
-header .menu a {
-    text-decoration: none;     /* Supprime le soulignement */
-    font-size: 16px;
-    padding: 10px;
-    transition: 0.3s ease-in-out;
-}
-
-header .menu a:hover {
-    transform: scale(1.05);    /* Zoom au survol */
-    border-radius: 6px;        /* Coins arrondis */
-}
-
-/* Couleur des liens */
-#acceuil {
-    color: #ffffff;
-}
-#scores {
-    color: #ffffff;
-}
-
-#contact {
-    border-radius: 6px;
-    background-color: rgb(255, 0, 0); /* Rouge vif */
-    color: #ffffff;
-}
-#contact:hover {
-    box-shadow: 0 0 5px #ff0303; /* Lueur rouge */
-    transform: scale(1.05);
-}
+<!DOCTYPE html>
 
 
-/* =======================================================
-   INTRO (Titre et texte au-dessus du tableau)
-   ======================================================= */
-.intro-jeu {
-    text-align: center;
-    color: rgb(255, 255, 255); /* Texte blanc */
-    margin-top: 120px;         /* Décalage sous le header */
-    margin-bottom: 40px;       /* Espace avant le tableau */
-}
-.intro-jeu h1 {
-    margin-bottom: 15px;
-}
-
-.options-jeu {
-    display: flex;
-    justify-content: center;   /* Centre horizontalement */
-    align-items: center;       /* Aligne verticalement */
-    gap: 20px;                 /* Espacement entre éléments */
-    margin: 0 auto 40px auto;  /* Centre le bloc */
-    max-width: 600px;          /* Empêche l’étalement */
-}
-
-
-
-
-
-/* =======================================================
-   FOND GLOBAL
-   ======================================================= */
-body {
-  background-color: #070320;   /* Fond général sombre */
-}
-
-
-/* =======================================================
-   SECTION TEXTE + IMAGE (présentation)
-   ======================================================= */
-.section-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px;
-  gap: 40px;                  /* Espace entre texte et image */
-  max-width: 1000px;
-  margin: auto;
-}
-
-.texte-gauche {
-  flex: 1;
-  color: #ffffff;             /* Texte blanc */
-}
-
-.sous-titre {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-.corps {
-  font-size: 1.1em;
-  margin-bottom: 20px;
-}
-
-/* Bouton "Jouer" */
-.btn-jouer {
-  padding: 10px 20px;
-  font-size: 1em;
-  background-color: #ff0000;  /* Rouge vif */
-  color: #ffffff;             /* Texte blanc */
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
-  transition: background 0.3s ease;
-}
-.btn-jouer:hover {
-  background-color: #cc0000;  /* Rouge foncé au survol */
-}
-
-/* Image à droite */
-.image-droite img {
-  max-width: 400px;
-  height: auto;
-  border-radius: 8px;
-}
-
-
-/* =======================================================
-   FOOTER
-   ======================================================= */
-footer {
-    margin-top: 100px;
-    width: 100%;
-    background-color: white;
-    flex-direction: column;
-}
-
-.footer-top {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-footer p {
-    color: black !important;
-}
-
-footer a {
-    color: black !important;
-    text-decoration: none;
-}
-
-/* Blocs de contenu */
-.footer1 {
-    justify-content: start;
-    height: 215px;
-}
-.footer2 {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    height: 215px;
-}
-.footer3 {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
-.footer3 p {
-    margin-bottom: 5px;
-}
-
-/* Bas de page */
-.footer-bottom {
-    display: flex;
-    justify-content: center;
-    font-size: 13px;
-}
-
-
-#logo {
-    height: 50px;
-    margin: 0px;
-}
-
-footer hr { 
-  border: 1px solid black;
-}
-
-.reseaux {
-    display: flex;
-    gap: 10px; 
-    margin-top: 180px;
-    align-items: end;               /* Espacement entre icônes */
-}
-
-.reseau-icon {
-    width: 40px;
-    height: 30px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-.reseau-icon:hover {
-    transform: scale(1.1);    /* Zoom au survol */
-}
-
-
-#BOUTON {
-    display: block;
-    margin-left: auto;
-    width: fit-content;
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #ff0000;
-    color: #ffffff;             /* Blanc */
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    text-decoration: none
-  }
-
-
-.chat-panel {
-    position: absolute; 
-    bottom: 20px;       
-    right: 20px;        
-    width: 300px;       
-    height: 400px;
-    max-height: 400px;  
-    background-color: #f1f1f1; 
-    border: 1px solid #ccc;     
-    border-radius: 10px;        
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
-}
-
-.chat-header {
-    background-color: #ff0000;
-    color: white;
-    padding: 10px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.messages {
-    flex: 1;
-    padding: 10px;
-    overflow-y: auto; /* défilement vertical si trop de messages */
-    background-color: #fff;
-}
-
-.msg {
-    margin-bottom: 10px;
-    padding: 5px 10px;
-    border-radius: 8px;
-    max-width: 80%;
-}
-
-.msg.bot {
-    background-color: #e0e0e0;
-    align-self: flex-start;
-}
-
-.msg.user {
-    background-color: #ff0000;
-    color: white;
-    align-self: flex-end;
-}
-
-.chat-input {
-    border-top: 1px solid #ccc;
-    padding: 5px;
-    background-color: #f9f9f9;
-}
-
-.chat-input input {
-    width: 100%;
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 100px);
-  gap: 20px;
-}
-
-.cell img {
-  width: 100px;
-  height: 100px;
-  border-radius: 8px;
-  object-fit: cover;
+<?php
+$title = "Index";
+$cssFile = "Game/memory/pagejeux.css"; // Feuille de style principale
+include 'partials/head_pagejeux.php'; // inclusion du <head>
+include 'partials/header.php'; // inclusion du header
+?>
+   
     
-}
+<body>
+        
+    <div class="intro-jeu">
+        <h1>Bienvenue dans The Power of Memory</h1>
+        <p>Testez votre mémoire avec nos grilles de cartes et tentez de battre les meilleurs scores !</p>
+    </div>
+    <div class="container">
+        <div class="controls">
+        <label for="grid-size">Taille de la grille</label>
+        <select id="grid-size">
+            <option value="4x4">4x4</option>
+            <option value="6x6">6x6</option>
+            <option value="8x8">8x8</option>
+        </select>
 
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+        <label for="theme">Thème</label>
+        <select id="theme">
+            <option value="JeuxVidéo">JeuxVidéo</option>
+            <option value="Animaux">Animaux</option>
+            <option value="Nourriture">Nourriture</option>
+        </select>
 
-.controls {
-  margin-bottom: 30px;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  flex-wrap: wrap;
-}
+        <button id="generate">Générer une grille</button>
+        </div>
 
-.controls label {
-  margin-right: 5px;
-}
-
-select, button {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  font-size: 16px;
-}
-
-button {
-  background-color: red;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-}
+        <div class="grid">
+            <!-- 16 images de manettes -->
+            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="img\j n64.jpg" alt="Manette"></div>
+            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="img\j n64.jpg" alt="Manette"></div>
+            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
+        </div>
+    </div>
+    <div class="section-container">
+        <div class="texte-gauche">
+            <h3 class="sous-titre">KCULTURE INFO</h3>
+            <p class="corps">Venez decouvrir  notre tout nouveau Jeu de culture informatique, présenté sous formes de questions reponses "battle royale" à la maniere d'un Maitre des Fleurs</p>
+            <a href="pagejeux.html" class="btn-jouer">Jouer</a>
+        </div>
+        <div class="image-droite">
+            <img src="img/manette.jpg" alt="silksong">
+        </div>
+    </div>
+    <aside class="chat-panel" aria-label="Espace de chat">
+        <header class="chat-header">
+            <div>
+                <div>Power Of Memory</div>
+            </div>
+        </header>
+        <div class="messages">
+            <div class="msg bot">Encore Gagné.</div>
+            <div class="msg user">Je vais te battre.</div>
+        </div>
+        <div class="chat-input">
+            <form>
+                <input type="text" placeholder="Écrire un message..." aria-label="Message"  />
+            </form>
+        </div>
+    </aside>
+        
+</body>
+<?php
+include 'partials/footer.php'; // inclusion du footer
+?>
+    
+</html>
