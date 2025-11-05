@@ -1,12 +1,15 @@
+
 <!DOCTYPE html>
 <!--- Define the page as a html web page--->
 <html lang="fr">
-<?php
-$title = "Index";
-$cssFile = "styles.css"; // Feuille de style principale
-include 'partials/head.php';
-?>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <?php include 'partials/head.php'; ?>
+</head>
+
+
 <body>
+
     <div class="all" >
         <a href="accueil.php" ><button id="AC"><img src="img/buttonhome.jpg"></button></a><!---define home button--->
         <a href="index.php"><button id="home"><img src="img/buttonprofil.jpg"></button></a><!---define redirection button to index.html--->

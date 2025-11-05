@@ -2,16 +2,18 @@
 
 <!DOCTYPE html>
 
-<html lang="fr">
-<?php
-$title = "ACS";
-$cssFile = "ACS.css"; // Feuille de style principale
-include 'partials/head_ACS.php'; // inclusion du <head>
-include 'partials/header.php'; // inclusion du header
-?>
+<head>
+    <link rel="stylesheet" href="ACS.css">
+    <link rel="stylesheet" href="Game/memory/scores.css">
+    <link rel="stylesheet" href="header.css">
+
+    <?php include 'partials/head.php'; ?>
+
+</head>
 
 
 <body>
+<?php include 'partials/header.php'; ?>
     <div class="container">
         <h1>Gestion du Compte</h1>
 
