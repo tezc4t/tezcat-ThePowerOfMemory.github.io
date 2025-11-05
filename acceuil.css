@@ -1,58 +1,12 @@
-/*header*/
-header {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #070320;
-}
 
-.header-container{
-    padding: 0 30px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-header img {
-    width: 50px;
-    height: auto;
-    transition: 0.3s ease-in-out;
-    margin: 0px;
-}
 
-header img:hover {
-    transform: scale(1.2);
-    rotate: 10deg;
-}
-
-header .menu {
-    display: flex;
-    gap: 78px;
-}
-
-header .menu a {
-    text-decoration: none;
-    font-size: 16px;
-    padding : 10px;
-    transition: 0.3s ease-in-out;
-}
-
-header .menu a:hover {
-    transform: scale(1.05);
-    border-radius: 6px;
-}
-
-#acceuil{
+#acceuil {
     color: #ffffff;
 }
 
-#scores{
+#scores {
     color: #ffffff;
 }
-
 
 #contact {
     border-radius: 6px;
@@ -67,33 +21,33 @@ header .menu a:hover {
 
 /*body*/
 
-#exclu{
+#exclu {
     color: #F80;
 }
 
-#bouton-commencer a{
+#bouton-commencer a {
     text-decoration: none;
 }
-#bouton-commencer{
+
+#bouton-commencer {
     width: 150px;
     height: 40px;
     border-radius: 20px;
     border: none;
-    background: linear-gradient(to right ,#FF0000, #DD8600);
-    color:#FFF;
+    background: linear-gradient(to right, #FF0000, #DD8600);
+    color: #FFF;
 }
 
-#bouton-commencer:hover{
+#bouton-commencer:hover {
     transform: scale(1.05);
 }
 
-#bouton-commencer:active{
+#bouton-commencer:active {
     transform: scale(0.95);
 }
 
- 
 /*div1*/
-#div1{
+#div1 {
     align-self: left;
     background-image: url(img/bannierejv.png);
     background-repeat: no-repeat;
@@ -103,18 +57,22 @@ header .menu a:hover {
     margin-left: 10%;
     margin-right: 10%;
 }
-#Titre-jeu{
+
+#Titre-jeu {
     text-align: left;
     margin: 0;
 }
+
 /*div2*/
-#div2{
+#div2 {
     align-self: center;
 }
-#liste-jeux{
+
+#liste-jeux {
     margin-left: 22%;
     scale: 130%
 }
+
 .container-boutons {
     display: flex;
     justify-content: space-between; /* ou space-evenly, selon ton besoin */
@@ -122,51 +80,57 @@ header .menu a:hover {
     margin: 0 auto;
     width: 90%; /* ou la largeur que tu veux */
 }
-#bouton-memory, #logo-memory{
+
+#bouton-memory,
+#logo-memory {
     font-size: 1em;
-    color: #ffffff;             /* texte blanc */
-    border: none;               /* pas de bordure */
-    text-decoration: none;      /* enlève le soulignement si c'est un <a> */
-    display: flex;      /* pour que le padding s’applique correctement */
+    color: #ffffff; /* texte blanc */
+    border: none; /* pas de bordure */
+    text-decoration: none; /* enlève le soulignement si c'est un <a> */
+    display: flex; /* pour que le padding s’applique correctement */
     flex-direction: column; /* pour que le texte s'affiche sous l'image*/
     align-items: center;
     justify-content: center;
     width: 60%;
 }
-#bouton-jeu, #logo-manette{
+
+#bouton-jeu,
+#logo-manette {
     font-size: 1em;
-    color: #ffffff;             /* texte blanc */
-    border: none;               /* pas de bordure */
+    color: #ffffff; /* texte blanc */
+    border: none; /* pas de bordure */
     border-radius: 20px;
-    text-decoration: none;      /* enlève le soulignement si c'est un <a> */
-    display: flex;      /* pour que le padding s’applique correctement */
+    text-decoration: none; /* enlève le soulignement si c'est un <a> */
+    display: flex; /* pour que le padding s’applique correctement */
     flex-direction: column; /* pour que le texte s'affiche sous l'image*/
     align-items: center;
     justify-content: center;
     width: 65%;
 }
+
 /*div3*/
-#div3{
+#div3 {
     padding-bottom: 50%;
     background-image: url(img/playjv.jpg);
     background-repeat: no-repeat;
     background-size: 80%;
     background-position-y: 60%;
     background-position-x: 50%;
-
-    
 }
-#petit-text{
+
+#petit-text {
     margin-left: 10%;
 }
-#gros-text{
+
+#gros-text {
     display: grid;
     place-items: center;
     padding-bottom: 5%;
     font-size: 33px;
 }
+
 /*div4*/
-#div4{
+#div4 {
     display: grid;
     place-items: center;
     background-image: url(img/reseau.webp);
@@ -174,81 +138,97 @@ header .menu a:hover {
     background-size: cover;
 }
 
-#ligne1, #ligne2{
+#ligne1,
+#ligne2 {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     border-spacing: 20px;
 }
-.stat-text{
+
+.stat-text {
     display: grid;
     place-items: center;
     justify-content: center;
     font-size: 70%;
     white-space: nowrap;
 }
-.nb-stat{
+
+.nb-stat {
     display: grid;
     place-items: center;
     font-size: 300%;
 }
-.stat{
+
+.stat {
     min-width: 200px;
     line-height: 0;
     width: 200%;
     border-radius: 5px;
 }
-#stat1{
+
+#stat1 {
     background-color: red;
 }
-#stat2{
+
+#stat2 {
     background-color: green;
 }
-#stat3{
+
+#stat3 {
     background-color: rgb(0, 161, 161);
 }
-#stat4{
+
+#stat4 {
     background-color: black;
 }
-#stat5{
+
+#stat5 {
     background-color: darkblue;
 }
+
 /*div5*/
-#div5{
+#div5 {
     display: grid;
     place-items: center;
     color: #ffffff;
     margin-top: 5%;
-    #j-ai-plus-d-id{
-        font-size: x-large;
-        line-height: 0;
-    }
 }
+
+#div5 #j-ai-plus-d-id {
+    font-size: x-large;
+    line-height: 0;
+}
+
 /*div6*/
-#div6{
+#div6 {
     margin-left: 10%;
     margin-right: 10%;
 }
-#boite-blanche{
+
+#boite-blanche {
     background-color: #FFF;
     margin-top: 5%;
     border-radius: 10px;
     border-spacing: 40px;
     min-width: 100%;
-
 }
-#text-noire{
+
+#text-noire {
     color: black;
     width: 40%;
     margin-left: 10%;
-    }
-#adresse-mail{
+}
+
+#adresse-mail {
     background-color: black;
     color: white;
     padding: 8px;
     border-radius: 5px;
 }
-#text-noire,#adresse-mail{
+
+#text-noire,
+#adresse-mail {
     scale: 1.5;
 }
 
@@ -262,24 +242,27 @@ body {
     padding-top: 80px;
 }
 
-
-p, h1, a, h3, label{
+p,
+h1,
+a,
+h3,
+label {
     color: white;
 }
-#valider{
-    background-color:red;
+
+#valider {
+    background-color: red;
     color: #FFF;
     border-radius: 6px;
     width: 80px;
     height: 30px;
-}  
-
+}
 
 /*Titre*/
 
 .titre {
     margin: 100px auto 50px auto;
-    width: 80%; 
+    width: 80%;
     text-align: center;
 }
 
@@ -292,8 +275,6 @@ p, h1, a, h3, label{
     margin-top: 20px;
 }
 
-
-
 /*Infos*/
 
 .infos {
@@ -301,7 +282,6 @@ p, h1, a, h3, label{
     justify-content: space-around;
     width: 60%;
 }
-
 
 /*Formulaire*/
 h2 {
@@ -311,15 +291,12 @@ h2 {
     color: white;
 }
 
-
-
 /*Polices*/
 
 @font-face {
     font-family: 'Poppins';
     src: url('../font/Poppins-Regular.ttf') format('truetype');
 }
-
 
 /*footer*/
 footer {
@@ -334,6 +311,7 @@ footer {
     justify-content: space-around;
     align-items: center;
 }
+
 footer p {
     color: black !important;
 }
@@ -342,7 +320,6 @@ footer a {
     color: black !important;
     text-decoration: none;
 }
-
 
 .footer1 {
     justify-content: start;
@@ -366,13 +343,11 @@ footer a {
     margin-bottom: 0px;
 }
 
-
 .footer-bottom {
     display: flex;
     justify-content: center;
     font-size: 13px;
 }
-
 
 #reseaux {
     margin-top: 180px;
@@ -380,18 +355,18 @@ footer a {
     align-items: end;
 }
 
-#logo{
+#logo {
     height: 50px;
     margin: 0px;
 }
 
-footer hr{ 
-  border: 1px solid black;
+footer hr {
+    border: 1px solid black;
 }
 
 .reseaux {
     display: flex;
-    gap: 10px; /* espace entre les icônes */
+    gap: 10px;
 }
 
 .reseau-icon {
@@ -404,5 +379,3 @@ footer hr{
 .reseau-icon:hover {
     transform: scale(1.1);
 }
-
-

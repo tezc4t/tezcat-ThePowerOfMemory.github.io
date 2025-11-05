@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="acceuil.css">
     <?php include 'partials/head.php'; ?>
     <?php include 'utils/fonction.php'; ?>
 </head>

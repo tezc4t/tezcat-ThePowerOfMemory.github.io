@@ -1,52 +1,6 @@
 /* =======================================================
    HEADER
    ======================================================= */
-   header {
-    position: absolute;        /* Positionné en haut de la page */
-    top: 0;
-    width: 100%;               /* Prend toute la largeur */
-    display: flex;             /* Mise en page en flexbox */
-    align-items: center;       /* Aligne verticalement */
-    justify-content: space-between; /* Écarte logo et menu */
-    background-color: #070320; /* Couleur de fond sombre */
-}
-
-.header-container {
-    padding: 0 30px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header img {
-    width: 50px;               /* Taille fixe du logo */
-    height: auto;
-    transition: 0.3s ease-in-out; /* Animation fluide */
-    margin: 0px;
-}
-
-header img:hover {
-    transform: scale(1.2);     /* Zoom au survol */
-    rotate: 10deg;             /* Rotation légère */
-}
-
-header .menu {
-    display: flex;
-    gap: 78px;                 /* Espacement entre les liens */
-}
-
-header .menu a {
-    text-decoration: none;     /* Pas de soulignement */
-    font-size: 16px;
-    padding: 10px;
-    transition: 0.3s ease-in-out;
-}
-
-header .menu a:hover {
-    transform: scale(1.05);    /* Lien agrandi au survol */
-    border-radius: 6px;
-}
 
 /* Liens spécifiques */
 #acceuil, #scores {
