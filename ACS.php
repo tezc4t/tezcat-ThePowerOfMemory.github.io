@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 
-<!DOCTYPE html>
-
 <head>
     <link rel="stylesheet" href="ACS.css">
     <link rel="stylesheet" href="Game/memory/scores.css">

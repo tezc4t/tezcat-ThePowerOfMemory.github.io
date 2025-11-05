@@ -1,8 +1,9 @@
-<?php require 'utils/functions-scores.php'; ?>
+<?php require 'utils/fonctions-accueil.php'; ?>
 
 <!DOCTYPE html>
 
 <html lang="fr">
+    <head>
 <head>
     <link rel="stylesheet" href="acceuil.css">
     <link rel="stylesheet" href="header.css">
