@@ -37,22 +37,18 @@
 
         <div class="grid">
             <!-- 16 images de manettes -->
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img\j n64.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img\j n64.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="../../img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="../../img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="../../img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="../../img\j n64.jpg" alt="Manette"></div>
+            <div class="cell"><img src="../../img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="../../img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="../../img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="../../img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="../../img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="../../img/card1.jpg" alt="Manette"></div>
+            <div class="cell"><img src="../../img\j n64.jpg" alt="Manette"></div>
+            <div class="cell"><img src="../../img/card1.jpg" alt="Manette"></div>
         </div>
     </div>
     <div class="section-container">
@@ -62,14 +58,12 @@
             <a href="pagejeux.html" class="btn-jouer">Jouer</a>
         </div>
         <div class="image-droite">
-            <img src="img/manette.jpg" alt="silksong">
+            <img src="../../img/manette.jpg" alt="silksong">
         </div>
     </div>
     <aside class="chat-panel" aria-label="Espace de chat">
         <header class="chat-header">
-            <div>
-                <div>Power Of Memory</div>
-            </div>
+            <div>Power Of Memory</div>
         </header>
         <div class="messages">
             <div class="msg bot">Encore Gagné.</div>

@@ -89,7 +89,3 @@ include 'partials/footer.php'; // inclusion du footer
     
 </html>
 
-
-
-
-

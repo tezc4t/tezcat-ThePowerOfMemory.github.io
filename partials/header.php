@@ -2,7 +2,7 @@
     <div class="header-container">
         <p>
             <a href="index.php">
-                <img src="img/LOGOS.png" alt="logo">
+                <img src="../../img/LOGOS.png" alt="logo">
             </a>
         </p>
 

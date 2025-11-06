@@ -1,3 +1,5 @@
+
+
 /* =======================================================
    HEADER
    ======================================================= */
@@ -261,7 +263,6 @@ footer hr {
     border-radius: 10px;        
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     font-family: Arial, sans-serif;
 }
 
