@@ -1,3 +1,6 @@
+<?php 
+require 'utils/fonctions-ACS.php';
+?>
 <!DOCTYPE html>
 
 <head>
@@ -17,11 +20,11 @@
 
         <div class="account-info">
             <h2>Informations actuelles</h2>
-            <p><strong>Nom :</strong> Kyllian Nouh</p>
-            <p><strong>Email :</strong> Kyllian.Nouh@gmail.com</p>
+            <p><strong>Nom :</strong> <?php echo affichernom() ?> </p>
+            <p><strong>Email :</strong> <?php echo afficheremail() ?> </p>
         </div>
 
-        <form class="account-form">
+        <form class="account-form" action="utils/formulaire_ACS.php" method="POST">
             <h2>Modifier les informations</h2>
             <label for="name">Nom</label>
             <input type="text" id="name" name="name" placeholder="Entrez votre nom">
