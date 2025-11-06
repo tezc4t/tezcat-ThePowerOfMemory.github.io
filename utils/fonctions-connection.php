@@ -11,7 +11,7 @@
     if ($u != NULL){
         header('Location: ../accueil.php');
         $_SESSION['mvsmdp'] = '';
-        $userid = $u['id'];
+        $_SESSION['userid'] = $u['id'];
     } else {
         $_SESSION['mvsmdp'] = 'adresse email ou mot de passe incorrect';
         header('Location: /index.php');

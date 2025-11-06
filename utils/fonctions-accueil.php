@@ -1,5 +1,4 @@
 <?php
-    require 'database.php';
 
     function getScore() {
         $pdo = getPDO();
