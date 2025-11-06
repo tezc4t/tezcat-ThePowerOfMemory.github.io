@@ -12,6 +12,7 @@
         header('Location: ../accueil.php');
         $_SESSION['mvsmdp'] = '';
         $_SESSION['userid'] = $u['id'];
+        $stmt2 = $pdo->query("UPDATE utilisateur SET last_connection = NOW() WHERE id = $_SESSION[userid]");
     } else {
         $_SESSION['mvsmdp'] = 'adresse email ou mot de passe incorrect';
         header('Location: /index.php');

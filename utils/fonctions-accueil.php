@@ -25,3 +25,9 @@
         $u = $stmt -> fetch();
         return $u['count(*)'];
     }
+    function sessionactive() {
+        $pdo = getPDO();
+        $stmt = $pdo->query("SELECT count(*) FROM utilisateur WHERE last_connection >= NOW() - INTERVAL 1 HOUR");
+        $u = $stmt -> fetch();
+        return $u['count(*)'];
+    }

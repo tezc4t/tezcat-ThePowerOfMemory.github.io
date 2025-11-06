@@ -70,7 +70,7 @@
             <td class="stat" id="stat2">
                 <p class="nb-stat">
                     <?php
-                        echo"1020"
+                        echo sessionactive()
                     ?>
                 </p>
                 <p class="stat-text">
