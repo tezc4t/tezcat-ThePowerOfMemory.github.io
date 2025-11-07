@@ -1,4 +1,5 @@
 <?php
+    // vérifie si les infos entrées correspondent à un compte existant et renvoie vers la page d'acceuil si oui
     session_start();
     require 'database.php';
     $pdo = getPDO();
@@ -11,8 +12,8 @@
     if ($u != NULL){
         header('Location: ../accueil.php');
         $_SESSION['mvsmdp'] = '';
-        $_SESSION['userid'] = $u['id'];
-        $stmt2 = $pdo->query("UPDATE utilisateur SET last_connection = NOW() WHERE id = $_SESSION[userid]");
+        $_SESSION['userid'] = $u['id']; // récupère l'id du compte connecté
+        $stmt2 = $pdo->query("UPDATE utilisateur SET last_connection = NOW() WHERE id = $_SESSION[userid]"); // met à jour la dernière connection du compte
     } else {
         $_SESSION['mvsmdp'] = 'adresse email ou mot de passe incorrect';
         header('Location: /index.php');

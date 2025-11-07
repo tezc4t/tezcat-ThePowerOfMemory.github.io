@@ -24,7 +24,7 @@ require 'utils/fonctions-ACS.php';
             <p><strong>Email :</strong> <?php echo afficheremail() ?> </p>
         </div>
 
-        <form class="account-form" action="utils/formulaire_ACS.php" method="POST">
+        <form class="account-form" action="utils/formulaire_ACS.php" method="POST"> <!-- formulaire pour changer les infos du compte -->
             <h2>Modifier les informations</h2>
             <label for="name">Nom</label>
             <input type="text" id="name" name="name" placeholder="Entrez votre nom">
@@ -36,8 +36,8 @@ require 'utils/fonctions-ACS.php';
             <input type="password" id="password" name="password" placeholder="Nouveau mot de passe">
 
             <div class="buttons">
-                <button type="submit">Mettre à jour</button>
-                <button type="button" class="delete">Supprimer le compte</button>
+                <button type="submit">Mettre à jour</button> <!-- bouton pour enregistrer les changements -->
+                <button type="button" class="delete">Supprimer le compte</button> <!-- bouton pour supprimer le compte -->
             </div>
         </form>
     </div>

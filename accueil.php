@@ -61,7 +61,9 @@
         <table id="ligne1">
             <td class="stat" id="stat1">
                 <p class="nb-stat">
-                    <?php echo getScore(); ?>
+                    <?php 
+                        echo getScore(); // nb de parties jouées en temps réel 
+                    ?>
                 </p>
                 <p class="stat-text">
                     Parties Jouées
@@ -70,7 +72,7 @@
             <td class="stat" id="stat2">
                 <p class="nb-stat">
                     <?php
-                        echo sessionactive()
+                        echo sessionactive() // nb de joueurs connecté en temps réel
                     ?>
                 </p>
                 <p class="stat-text">
@@ -80,7 +82,7 @@
             <td class="stat" id="stat3">
                 <p class="nb-stat">
                     <?php
-                        echo lowScore() . "s";
+                        echo lowScore() . "s"; // temps record en temps réel
                     ?>
                 </p>
                 <p class="stat-text">
@@ -92,7 +94,7 @@
             <td class="stat" id="stat4">
                 <p class="nb-stat">
                     <?php
-                        echo nbutilisateur();
+                        echo nbutilisateur(); // nb de joueurs inscrits en temps réel
                     ?>
                 </p>
                 <p class="stat-text">
@@ -102,7 +104,7 @@
             <td class="stat" id="stat5">
                 <p class="nb-stat">
                     <?php
-                        echo nbscorebattu();
+                        echo nbscorebattu(); // nb de records battus aujourd'hui en temps réel
                     ?>
                 </p>
                 <p class="stat-text">

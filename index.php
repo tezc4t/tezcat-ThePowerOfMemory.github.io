@@ -25,13 +25,13 @@
                 <h1 id="titremain">Heureux de vous revoir</h1><!---define main title and second title--->
                 <h2 id="titresecond">En esperant que vous vous amuserez !</h2>
             </header>
-            <form action="utils/fonctions-connection.php" method="POST">
-                <figcaption id="titre_input" >Email</figcaption> <!---define the forms for connexion--->
+            <form action="utils/fonctions-connection.php" method="POST"> <!---define the forms for connexion--->
+                <figcaption id="titre_input" >Email</figcaption> 
                 <input id="text" type="text" name="email" placeholder ="Exemple@gmail.com" >
                 <figcaption id="titre_input" >Mot de passe</figcaption>
                 <input id="text" type="text" name="mdp" placeholder="8 caracteres differents" >
                 <?php 
-                    echo $_SESSION['mvsmdp'];
+                    echo $_SESSION['mvsmdp']; // message d'erreur si compte inexistant
                 ?>
                 <a id="mdpo" href="My Account.php">mot de passe oublié?</a><!---redirection for MyAccount.html(renitalisation) page--->
                 <button id="login1" type = "submit">connexion</button>

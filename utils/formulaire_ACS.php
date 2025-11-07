@@ -1,4 +1,5 @@
 <?php
+    // modifier les infos du comptes
     session_start();
     require 'database.php';
     $pdo = getPDO();
