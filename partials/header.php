@@ -1,6 +1,4 @@
-<?php
-    require 'utils/fonctions-header.php';
-?>
+
 <header>
     <div class="header-container">
         <p>

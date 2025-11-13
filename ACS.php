@@ -1,6 +1,4 @@
-<?php 
-require 'utils/fonctions-ACS.php';
-?>
+
 <!DOCTYPE html>
 
 <head>

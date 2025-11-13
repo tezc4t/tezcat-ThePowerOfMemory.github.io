@@ -1,4 +1,3 @@
-<?php require 'utils/fonctions-accueil.php'; ?>
 
 <!DOCTYPE html>
 
