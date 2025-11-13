@@ -1,5 +1,4 @@
 <?php
-    session_start();
     require 'utils/fonctions-header.php';
 ?>
 <header>
