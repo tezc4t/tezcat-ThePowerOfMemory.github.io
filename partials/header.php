@@ -1,4 +1,3 @@
-
 <header>
     <div class="header-container">
         <p>
@@ -9,7 +8,7 @@
 
         <nav class="menu">
             <a class="<?php active('accueil.php'); ?>" id="accueil" href="accueil.php">Accueil</a>
-            <a class="<?php active('scores.php'); ?>" id="scores" href="Game/memory/scores.php">Scores</a>
+            <a class="<?php active('Game/memory/scores.php'); ?>" id="scores" href="Game/memory/scores.php">Scores</a>
             <a class="<?php active('ACS.php'); ?>" id="Profil" href="ACS.php">
                 <?php
                     echo affichernom(); // affiche le pseudo du compte connecté

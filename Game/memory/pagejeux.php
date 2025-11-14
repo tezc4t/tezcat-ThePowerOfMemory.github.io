@@ -10,7 +10,7 @@ include '../../partials/headgame.php';
 </head>
 <body>
     <?php
-        include '../../partials/header.php'; // inclusion du header
+        include '../../partials/headergame.php'; // inclusion du header
     ?>
         
     <div class="intro-jeu">

@@ -5,11 +5,11 @@
 <head>
     <link rel="stylesheet" href="../../header.css">
     <link rel="stylesheet" href="scores.css">
-    <?php include . '../../partials/head.php'; ?>
+    <?php include '../../partials/headgame.php'; ?>
 </head>
 
 <body>
-    <?php include . '../../partials/header.php'; ?>
+    <?php include '../../partials/headergame.php'; ?>
         
     <div class="intro-jeu">
         <h1>Score Of The Power of Memory</h1>
