@@ -3,13 +3,13 @@
 
 <html lang="fr">
 <head>
+    <link rel="stylesheet" href="../../header.css">
     <link rel="stylesheet" href="scores.css">
-    <?php include __DIR__ . '/../../partials/head.php'; ?>
-    <?php include '../../utils/fonction.php'; ?>
+    <?php include . '../../partials/head.php'; ?>
 </head>
 
 <body>
-    <?php include __DIR__ . '/../../partials/header.php'; ?>
+    <?php include . '../../partials/header.php'; ?>
         
     <div class="intro-jeu">
         <h1>Score Of The Power of Memory</h1>
