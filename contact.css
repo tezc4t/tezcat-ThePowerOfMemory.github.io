@@ -3,6 +3,8 @@ body {
     background-color: #070320;
     color: white !important;
     font-family: sans-serif;
+    align-content: center !important;
+    margin: 0;
 }
 
 img {
@@ -83,16 +85,16 @@ form input[type="email"] {
     width: 60%;
     min-width: 220px;
     max-width: 560px;
-    text-align: center;
+    text-align: center !important
     margin: 8px 0;
     transition: transform 0.2s;
-    color: black !important;
+    color: rgb(0, 0, 0) !important;
 }
 
 form button[type="submit"] {
     background-color: rgb(255, 0, 0);
     color: white;
-    border: none;
+    border: white;
     border-radius: 30px;
     padding: 10px 32px;
     font-size: 18px;
@@ -186,4 +188,40 @@ footer hr {
 
 .reseau-icon:hover {
     transform: scale(1.1);
+}
+
+
+.all {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    width: 30%;
+}
+
+.social-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 12px;
+}
+
+.tel-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    max-width: 30%;
+}
+
+.adresse-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 30%;
 }
