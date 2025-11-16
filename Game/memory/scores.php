@@ -4,7 +4,7 @@
 <?php
 $title = "Scores";
 $cssFile = "Game/memory/scores.css";
-$baseHref = "../../"; // permet aux partials d'utiliser des chemins relatifs vers la racine
+$baseHref = "../../"; 
 include __DIR__ . '/../../partials/head.php';
 ?>
 <body>
@@ -20,11 +20,11 @@ include __DIR__ . '/../../partials/head.php';
         ['id' => 5, 'game' => 'The power of memory', 'player' => 'Joueur 5', 'difficulty' => 'Difficile', 'score' => '1m45', 'date' => '2025/09/24'],
     ];
 
-    // Récupérer les scores et difficultés
+    // récupérer les scores et difficulté
     $search = isset($_GET['search']) ? trim($_GET['search']) : '';
     $difficulty = isset($_GET['difficulty']) ? $_GET['difficulty'] : 'all';
 
-    // Filtrer les scores
+    // filtrer les scores
     $filtered_scores = array_filter($scores, function($score) use ($search, $difficulty) {
         $name_match = empty($search) || stripos($score['player'], $search) !== false;
         $difficulty_match = $difficulty === 'all' || strtolower($score['difficulty']) === strtolower($difficulty);
@@ -36,7 +36,7 @@ include __DIR__ . '/../../partials/head.php';
         <h1>Score Of The Power of Memory</h1>
         <p>Tentez de battre nos meilleurs joueurs avec le moins de temps possible !</p>
     </div>
-    <div class="scoreboard">
+   <div class="scoreboard">
         <form method="GET" class="scoreboard-controls">
             <label for="search">Rechercher :</label>
             <input type="text" id="search" name="search" value="<?= htmlspecialchars($search) ?>">
@@ -47,11 +47,11 @@ include __DIR__ . '/../../partials/head.php';
                 <option value="facile" <?= $difficulty === 'facile' ? 'selected' : '' ?>>Facile</option>
                 <option value="moyenne" <?= $difficulty === 'moyenne' ? 'selected' : '' ?>>Moyenne</option>
                 <option value="difficile" <?= $difficulty === 'difficile' ? 'selected' : '' ?>>Difficile</option>
-            </select>
+            </select> 
             <button type="submit" class="filter-button">Filtrer</button>
         </form>
 
-        <table>
+        <table class="scores-table">
             <thead>
             <tr>
                 <th>#</th>
@@ -71,7 +71,7 @@ include __DIR__ . '/../../partials/head.php';
                 <?php foreach ($filtered_scores as $score): ?>
                 <tr>
                     <td><?= htmlspecialchars($score['id']) ?></td>
-                    <td><img id="f" src="img/truememory.jpg" alt="memory game"> <?= htmlspecialchars($score['game']) ?></td>
+                    <td><img id="f" src="<?= $baseHref ?>img/truememory.jpg" alt="memory game"> <?= htmlspecialchars($score['game']) ?></td>
                     <td><?= htmlspecialchars($score['player']) ?></td>
                     <td><?= htmlspecialchars($score['difficulty']) ?></td>
                     <td><?= htmlspecialchars($score['score']) ?></td>
@@ -86,11 +86,11 @@ include __DIR__ . '/../../partials/head.php';
         <div class="texte-gauche">
             <h3 class="sous-titre">Envie de Contester un titre <br> ou une place ?</h3>
             <p class="corps">Venez alors vous affronter pour tenter de gravir les échellons dans nos différents jeux , tous compétitifs et encourageants a la réflexion !</p>
-            <a href="pagejeux.html" class="btn-jouer">Jouer</a>
+              <a href="<?= $baseHref ?>Game/memory/pagejeux.php" class="btn-jouer">Jouer</a>
         </div>
-        <div class="image-droite">
-            <img src="img/manette.jpg" alt="silksong">
-        </div>
+      <div class="image-droite">
+          <img src="<?= $baseHref ?>img/manette.jpg" alt="manette">
+      </div>
     </div>
         
    
