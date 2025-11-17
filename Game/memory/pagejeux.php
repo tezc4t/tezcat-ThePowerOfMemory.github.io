@@ -3,7 +3,7 @@
 <head>
 <?php
 $title = "Index";
-include '../../partials/headgame.php'; 
+include '../../partials/headgame.php';
 ?>
 <link rel="stylesheet" href="pagejeux.css">
 <link rel="stylesheet" href="../../header.css">
@@ -34,27 +34,10 @@ include '../../partials/headgame.php';
         </select>
 
         <button id="generate">Générer une grille</button>
+        <P>timer :</p>
+        <p id="timer"></p>
         </div>
-
-        <div class="grid">
-            <!-- 16 images de manettes -->
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img\j n64.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img\j n64.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-        </div>
+        <div class="grid" id="grid"></div>
     </div>
     <div class="section-container">
         <div class="texte-gauche">
@@ -66,26 +49,79 @@ include '../../partials/headgame.php';
             <img src="img/manette.jpg" alt="silksong">
         </div>
     </div>
-    <aside class="chat-panel" aria-label="Espace de chat">
-        <header class="chat-header">
-            <div>
-                <div>Power Of Memory</div>
-            </div>
-        </header>
-        <div class="messages">
-            <div class="msg bot">Encore Gagné.</div>
-            <div class="msg user">Je vais te battre.</div>
-        </div>
-        <div class="chat-input">
-            <form>
-                <input type="text" placeholder="Écrire un message..." aria-label="Message"  />
-            </form>
-        </div>
-    </aside>
+        <script>
+    // partie simple
+    const USER_ID = <?= json_encode($_SESSION['user_id'] ?? 0) ?>;
+    const chatBody = document.querySelector('.chat-body');
+    const chatInput = document.querySelector('.chat-input input');
+
+    const chatToggle = document.getElementById('chat-toggle');
+    const chatBox = document.querySelector('.chatbox');
+
+
+    // partie complex
+    // chatbox hide
+    chatBox.style.display = 'none';
+
+    chatToggle.addEventListener('click', () => {
+        const isOpen = chatBox.style.display === 'flex';
+        chatBox.style.display = isOpen ? 'none' : 'flex';
+        chatToggle.classList.toggle('open', !isOpen);
+    });
+
+    function loadMessages() {
+        fetch("../../page.php?action=load")
+        .then(res => res.json())
+        .then(messages => {
+            chatBody.innerHTML = "";
+            messages.forEach(msg => { // boucle
+                const isMe = msg.user_id == USER_ID;
+                const isImage = /\.(gif|png|jpg|jpeg)$/i.test(msg.message);
+                const content = isImage
+                    ? `<img src="${msg.message}" class="chat-gif">`
+                    : msg.message;
+
+                chatBody.innerHTML += `
+                    <div class="message ${isMe ? "right" : "left"}">
+                        <span class="sender">${isMe ? "You" : msg.pseudo}</span>
+                        <div class="bubble ${isMe ? "red" : ""}">
+                            ${content}
+                        </div>
+                        <span class="time">${msg.created_at}</span>
+                    </div>
+                `;
+            });
+            chatBody.scrollTop = chatBody.scrollHeight;
+        })
+    }
+    // sending message
+    chatInput.addEventListener("keypress", function(e) {
+        if (e.key === "Enter" && chatInput.value.trim() !== "") {
+            fetch("../../page.php?action=send", {
+                method: "POST",
+                headers: {"Content-Type": "application/x-www-form-urlencoded"},
+                body: "message=" + encodeURIComponent(chatInput.value)
+            })
+            .then(res => res.text())
+            .then(text => {
+                console.log('send response:', text);  // <-- ça montre si OK ou erreur
+                chatInput.value = "";
+                loadMessages();
+            });
+        }
+    });
+
+    // refresh
+
+    setInterval(loadMessages, 10000);
+    loadMessages();
+
+    </script>
+﻿
         
 </body>
 <?php
-include 'partials/footer.php'; // inclusion du footer
+include '../../partials/footer.php'; // inclusion du footer
 ?>
-    
+<script src="../../Game/memory/jeux.js"> </script> 
 </html>
