@@ -17,7 +17,7 @@
         <h1>Gestion du Compte</h1>
 
         <div class="account-info">
-            <h2>Informations actuelles</h2>
+            <img id='photoprofil' src="img/buttonprofil.jpg" alt="photo de profil">
             <p><strong>Nom :</strong> <?php echo affichernom() ?> </p>
             <p><strong>Email :</strong> <?php echo afficheremail() ?> </p>
         </div>
@@ -35,7 +35,6 @@
 
             <div class="buttons">
                 <button type="submit">Mettre à jour</button> <!-- bouton pour enregistrer les changements -->
-                <button type="button" class="delete">Supprimer le compte</button> <!-- bouton pour supprimer le compte -->
             </div>
         </form>
     </div>

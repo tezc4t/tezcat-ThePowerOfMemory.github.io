@@ -18,7 +18,7 @@
             Nouveauté ! 
         </p>
         <h2 id="Titre-jeu">
-            Power <br> Of <br> Mémory 
+            Power <br> Of <br> Memory 
         </h2>
         <p id="paragraphe-pres">
             découvrez Power Of Mémory, un jeu inspiré du jeu de carte mémory.
