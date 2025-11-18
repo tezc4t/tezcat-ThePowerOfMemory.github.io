@@ -3,30 +3,52 @@ function genererGrille() {
     const taille = document.querySelector('#grid-size').value;
     const difficulte = document.querySelector('#theme').value;
     console.log(taille, difficulte);
-}
+};
 
-function startTimer() {
-    const timerElement = document.getElementById("timer");
-    let temps = 0;
 
-    setInterval(function () {
-        temps++;
+let gameTimer = {
+    // Mon attribut interval id
+    intervalId: null,
+    element: document.getElementById("timer"),
+    activetimer: false,
+    startTimer() {
+        if (this.activetimer) { // éviter de lancer plusieurs timers
+            this.stopTimer();}
+        this.activetimer = true;
+        this.element.innerText = "0:00";
+        const timerElement  = this.element;
+        let temps           = 0;
 
-        let minutes = Math.floor(temps / 60);
-        let secondes = temps % 60;
+        this.intervalId     = setInterval(function () {
+            temps++;
 
-        secondes = secondes < 10 ? "0" + secondes : secondes;
+            let minutes = Math.floor(temps / 60);
+            let secondes = temps % 60;
 
-        timerElement.innerText = minutes + ":" + secondes;
-    }, 1000);
-}
+            secondes = secondes < 10 ? "0" + secondes : secondes;
+
+            timerElement.innerText = minutes + ":" + secondes;
+        }, 1000)
+    },
+
+    stopTimer() {
+        clearInterval(this.intervalId);
+        this.activetimer = false;
+    },
+
+    getTimer() {
+        return this.element.innerText;
+    },
+};
+
 
 const generateBtn = document.querySelector('#generate');
 
 generateBtn?.addEventListener('click', function(event) {
     genererGrille();
-    startTimer();
+    gameTimer.startTimer();
 });
+
 
 const gridElement = document.getElementById("grid");
 const gridSelect = document.getElementById("grid-size");
@@ -55,14 +77,4 @@ generateBtn.addEventListener("click", () => {
         cell.appendChild(img);
         gridElement.appendChild(cell);
     }
-});
-// fonctions pour la story 3
-function stopTimer(){
-
-}
-function resetTimer(){
-
-}
-function getTimer(){
-    const timerElement = document.getElementById("timer");
-}
+})
