@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 
-
 <head>
     <link rel="stylesheet" href="pagejeux.css">
 
-    <?php include '../../partials/head.php'; ?>
-    <?php include '../../utils/fonction.php'; ?>
+    <?php include '../../partials/headjs.php'; ?>
+    <?php include '../../utils/fonctionjs.php'; ?>
 </head>
 
-
 <body>
-<?php include '../../partials/header.php'; ?>
+    <?php include '../../partials/headerjs.php'; ?>
         
     <div class="intro-jeu">
         <h1>Bienvenue dans The Power of Memory</h1>
@@ -33,23 +31,11 @@
         </select>
 
         <button id="generate">Générer une grille</button>
+        <p>timer : </p>
+        <p id="timer"></p>
         </div>
 
-        <div class="grid">
-            <!-- 16 images de manettes -->
-            <div class="cell"><img src="../../img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="../../img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="../../img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="../../img\j n64.jpg" alt="Manette"></div>
-            <div class="cell"><img src="../../img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="../../img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="../../img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="../../img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="../../img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="../../img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="../../img\j n64.jpg" alt="Manette"></div>
-            <div class="cell"><img src="../../img/card1.jpg" alt="Manette"></div>
-        </div>
+        <div class="grid" id="grid"></div>
     </div>
     <div class="section-container">
         <div class="texte-gauche">
@@ -61,24 +47,23 @@
             <img src="../../img/manette.jpg" alt="silksong">
         </div>
     </div>
-    <aside class="chat-panel" aria-label="Espace de chat">
-        <header class="chat-header">
-            <div>Power Of Memory</div>
-        </header>
-        <div class="messages">
-            <div class="msg bot">Encore Gagné.</div>
-            <div class="msg user">Je vais te battre.</div>
+            <!-- Fenêtre de Chat -->
+            <div class="chat-panel">
+        <div class="chat-header">Power Of Memory - Chat</div>
+
+        <div class="chat-messages" id="messages">
+            <!-- Messages dynamiques -->
         </div>
+
         <div class="chat-input">
-            <form>
-                <input type="text" placeholder="Écrire un message..." aria-label="Message"  />
-            </form>
+            <input type="text" id="chat-message" placeholder="Écrire un message...">
+            <button id="chat-send">Envoyer</button>
         </div>
-    </aside>
+    </div>
         
 </body>
 <?php
 include '../../partials/footer.php'; // inclusion du footer
 ?>
-    
+<script src="../../Game/memory/jeux.js"></script>   
 </html>
