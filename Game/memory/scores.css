@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /* =======================================================
    HEADER
    ======================================================= */
@@ -66,10 +67,12 @@ header .menu a:hover {
 }
 
 
+=======
+>>>>>>> Stashed changes
 /* =======================================================
    INTRO (titre + options avant le tableau)
    ======================================================= */
-.intro-jeu {
+   .intro-jeu {
     text-align: center;
     color: rgb(255, 255, 255); /* Texte blanc */
     margin-top: 120px;         /* Décalage sous le header */
@@ -301,4 +304,64 @@ footer hr {
     transform: scale(1.1);    /* Zoom au survol */
 }
 
+/* =======================================================
+   CONTROLES DE FILTRAGE ET AMELIORATIONS POUR scores.php
+   ======================================================= */
+.scoreboard-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
 
+.scoreboard-controls label {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.scoreboard-controls input[type="text"],
+.scoreboard-controls select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 160px;
+}
+
+.filter-button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: #ff4d4d;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.filter-button:hover {
+  background: #cc0000;
+}
+
+.no-results {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+}
+
+/* image dans la colonne Jeu */
+td img#f, td img[alt="memory game"] {
+  width: 40px;
+  height: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@media (max-width: 800px) {
+  table { width: 95%; }
+  .section-container { flex-direction: column; padding: 20px; }
+  .image-droite img { max-width: 100%; }
+}
+
+#SRC {
+  color:white;
+}

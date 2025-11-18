@@ -1,8 +1,14 @@
+<link rel="stylesheet" href="../header.css">
 <header>
     <div class="header-container">
         <p>
+<<<<<<< Updated upstream
             <a href="index.html">
                 <img src="img/LOGOS.png" alt="logo">
+=======
+            <a href="index.php">
+                <img src="../img/LOGOS.png" alt="logo">
+>>>>>>> Stashed changes
             </a>
         </p>
         <nav class="menu">

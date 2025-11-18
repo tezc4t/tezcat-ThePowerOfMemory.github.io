@@ -19,7 +19,27 @@
     padding: 16px 24px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
+<<<<<<< Updated upstream
 /* Titre du formulaire centré et en gros */
+=======
+
+h2, h3, h4, h5, h6 {
+    font-size: 35px;
+    min-width: 200px;
+    color: rgb(0, 0, 0);
+}
+
+p, figcaption, input, a, button, ul, li, table, th, td {
+    font-size: 18px;
+    min-width: 5px;
+    text-align: center;
+}
+
+
+
+
+/* ===================== FORMULAIRE ===================== */
+>>>>>>> Stashed changes
 .titre-form {
     text-align: center;
     font-size: 2.2em;
@@ -471,5 +491,10 @@ footer hr {
     transition: transform 0.3s;
 }
 .reseau-icon:hover {
+<<<<<<< Updated upstream
     transform: scale(1.1);    /* Zoom au survol */
 }
+=======
+    transform: scale(1.1);
+}
+>>>>>>> Stashed changes

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 
+<<<<<<< Updated upstream
 <html lang="fr">
 <?php
 $title = "html contact";
@@ -8,14 +9,19 @@ $cssFile = "contact.css"; // Feuille de style principale
 include 'partials/head_html contact.php'; // inclusion du <head>
 include 'partials/header.php'; // inclusion du header
 ?>
+=======
+<head>
+    <link rel="stylesheet" href="contact.css">
+    <?php include 'partials/head.php'; ?>
+</head>
+
+>>>>>>> Stashed changes
 
 <body>
     <h1 id="titremain">Où sommes nous</h1>
     <p>nous nous trouvons dans plusieurs sites dans le monde</p>
     <img src="img/map.png" class="carte-centree" />
-    <section>
-                
-            </section>
+ 
         <!-- Carte déplacée en haut -->
     <section class="contact-section">
         <div class="all">
@@ -58,7 +64,7 @@ include 'partials/header.php'; // inclusion du header
                 </div>
                 <p>23, rue de paris<br>75002, Paris</p>
             </div>
-    </div>
+    </section>
     <div class="barre-horizontale"></div>
     <h2 class="titre-form">Nous contacter</h2>
     <p>Vous avez des questions, des suggestions ou besoin d'assistance ? N'hésitez pas à nous contacter en remplissant le formulaire ci-dessous. Nous sommes là pour vous aider et répondre à toutes vos demandes </p>
@@ -72,14 +78,13 @@ include 'partials/header.php'; // inclusion du header
                 <figcaption>Prénom</figcaption>
                 <input type="text" name="prenom">
             </div>
+            <figcaption>E-mail</figcaption>
+            <input type="email" name="email">
+            <figcaption>Votre message</figcaption>
+            <textarea name="message" placeholder="écrivez ce que vous voulez" class="textarea-auto" rows="3"></textarea>
+            <button type="submit">Envoyer</button>
         </div>
-        <figcaption>E-mail</figcaption>
-        <input type="email" name="email">
-    <figcaption>Votre message</figcaption>
-    <textarea name="message" placeholder="écrivez ce que vous voulez" class="textarea-auto" rows="3"></textarea>
-        <button type="submit">Envoyer</button>
     </form>
-    </section>
 </body>
 <?php
 include 'partials/footer.php'; // inclusion du footer

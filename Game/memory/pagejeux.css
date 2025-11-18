@@ -1,80 +1,11 @@
 /* =======================================================
-   HEADER
-   ======================================================= */
-   header {
-    position: absolute;        /* Position fixe en haut de la page */
-    top: 0;
-    width: 100%;               /* Largeur totale */
-    display: flex;             /* Organisation en flexbox */
-    align-items: center;       /* Alignement vertical */
-    justify-content: space-between; /* Sépare logo et menu */
-    background-color: #070320; /* Couleur de fond */
-}
-
-.header-container {
-    padding: 0 30px;           /* Espacement interne gauche/droite */
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header img {
-    width: 50px;
-    height: auto;
-    transition: 0.3s ease-in-out; /* Animation fluide */
-    margin: 0px;
-}
-
-header img:hover {
-    transform: scale(1.2);     /* Zoom au survol */
-    rotate: 10deg;             /* Rotation légère */
-}
-
-header .menu {
-    display: flex;
-    gap: 0px;                 /* Espacement entre les liens */
-}
-
-header .menu a {
-    text-decoration: none;     /* Supprime le soulignement */
-    font-size: 16px;
-    padding: 10px;
-    transition: 0.3s ease-in-out;
-}
-
-header .menu a:hover {
-    transform: scale(1.05);    /* Zoom au survol */
-    border-radius: 6px;        /* Coins arrondis */
-}
-
-/* Couleur des liens */
-#acceuil {
-    color: #ffffff;
-}
-#scores {
-    color: #ffffff;
-}
-
-#contact {
-    border-radius: 6px;
-    background-color: rgb(255, 0, 0); /* Rouge vif */
-    color: #ffffff;
-}
-#contact:hover {
-    box-shadow: 0 0 5px #ff0303; /* Lueur rouge */
-    transform: scale(1.05);
-}
-
-
-/* =======================================================
-   INTRO (Titre et texte au-dessus du tableau)
+   INTRO
    ======================================================= */
 .intro-jeu {
     text-align: center;
-    color: rgb(255, 255, 255); /* Texte blanc */
-    margin-top: 120px;         /* Décalage sous le header */
-    margin-bottom: 40px;       /* Espace avant le tableau */
+    color: rgb(255, 255, 255);
+    margin-top: 120px;
+    margin-bottom: 40px;
 }
 .intro-jeu h1 {
     margin-bottom: 15px;
@@ -82,41 +13,36 @@ header .menu a:hover {
 
 .options-jeu {
     display: flex;
-    justify-content: center;   /* Centre horizontalement */
-    align-items: center;       /* Aligne verticalement */
-    gap: 20px;                 /* Espacement entre éléments */
-    margin: 0 auto 40px auto;  /* Centre le bloc */
-    max-width: 600px;          /* Empêche l’étalement */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0 auto 40px auto;
+    max-width: 600px;
 }
-
-
-
-
 
 /* =======================================================
    FOND GLOBAL
    ======================================================= */
 body {
-  background-color: #070320;   /* Fond général sombre */
+  background-color: #070320;
 }
 
-
 /* =======================================================
-   SECTION TEXTE + IMAGE (présentation)
+   SECTION TEXTE + IMAGE
    ======================================================= */
 .section-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 40px;
-  gap: 40px;                  /* Espace entre texte et image */
+  gap: 40px;
   max-width: 1000px;
   margin: auto;
 }
 
 .texte-gauche {
   flex: 1;
-  color: #ffffff;             /* Texte blanc */
+  color: #ffffff;
 }
 
 .sous-titre {
@@ -129,12 +55,11 @@ body {
   margin-bottom: 20px;
 }
 
-/* Bouton "Jouer" */
 .btn-jouer {
   padding: 10px 20px;
   font-size: 1em;
-  background-color: #ff0000;  /* Rouge vif */
-  color: #ffffff;             /* Texte blanc */
+  background-color: #ff0000;
+  color: #ffffff;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -143,16 +68,14 @@ body {
   transition: background 0.3s ease;
 }
 .btn-jouer:hover {
-  background-color: #cc0000;  /* Rouge foncé au survol */
+  background-color: #cc0000;
 }
 
-/* Image à droite */
 .image-droite img {
   max-width: 400px;
   height: auto;
   border-radius: 8px;
 }
-
 
 /* =======================================================
    FOOTER
@@ -179,7 +102,6 @@ footer a {
     text-decoration: none;
 }
 
-/* Blocs de contenu */
 .footer1 {
     justify-content: start;
     height: 215px;
@@ -199,13 +121,11 @@ footer a {
     margin-bottom: 5px;
 }
 
-/* Bas de page */
 .footer-bottom {
     display: flex;
     justify-content: center;
     font-size: 13px;
 }
-
 
 #logo {
     height: 50px;
@@ -220,7 +140,7 @@ footer hr {
     display: flex;
     gap: 10px; 
     margin-top: 180px;
-    align-items: end;               /* Espacement entre icônes */
+    align-items: end;
 }
 
 .reseau-icon {
@@ -230,9 +150,8 @@ footer hr {
     transition: transform 0.3s;
 }
 .reseau-icon:hover {
-    transform: scale(1.1);    /* Zoom au survol */
+    transform: scale(1.1);
 }
-
 
 #BOUTON {
     display: block;
@@ -241,11 +160,12 @@ footer hr {
     padding: 10px 20px;
     font-size: 1em;
     background-color: #ff0000;
-    color: #ffffff;             /* Blanc */
+    color: #ffffff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     text-decoration: none
+<<<<<<< Updated upstream
   }
 
 
@@ -263,56 +183,15 @@ footer hr {
     flex-direction: column;
     overflow: hidden;
     font-family: Arial, sans-serif;
+=======
+>>>>>>> Stashed changes
 }
 
-.chat-header {
-    background-color: #ff0000;
-    color: white;
-    padding: 10px;
-    font-weight: bold;
-    text-align: center;
-}
+/* (Bloc CSS du chat supprimé ici) */
 
-.messages {
-    flex: 1;
-    padding: 10px;
-    overflow-y: auto; /* défilement vertical si trop de messages */
-    background-color: #fff;
-}
-
-.msg {
-    margin-bottom: 10px;
-    padding: 5px 10px;
-    border-radius: 8px;
-    max-width: 80%;
-}
-
-.msg.bot {
-    background-color: #e0e0e0;
-    align-self: flex-start;
-}
-
-.msg.user {
-    background-color: #ff0000;
-    color: white;
-    align-self: flex-end;
-}
-
-.chat-input {
-    border-top: 1px solid #ccc;
-    padding: 5px;
-    background-color: #f9f9f9;
-}
-
-.chat-input input {
-    width: 100%;
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-
-
+/* =======================================================
+   GRILLE DE JEU
+   ======================================================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 100px);
@@ -324,7 +203,6 @@ footer hr {
   height: 100px;
   border-radius: 8px;
   object-fit: cover;
-    
 }
 
 .container {
@@ -358,3 +236,94 @@ button {
   cursor: pointer;
   font-weight: bold;
 }
+
+#timer {
+    color: white;
+}
+
+.container label {
+    color: white;
+}
+
+.controls p{
+    color:white ;
+}
+
+/* =======================================================
+   CHAT (en bas à droite)
+   ======================================================= */
+
+   .chat-panel {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    height: 420px;
+    background-color: #1a1736;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #ff0000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 9999;
+}
+
+.chat-header {
+    background-color: #ff0000;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.chat-messages {
+    flex: 1;
+    background: white;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+.chat-msg {
+    padding: 6px 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    max-width: 85%;
+}
+
+.chat-user {
+    background: #ff0000;
+    color: white;
+    margin-left: auto;
+}
+
+.chat-bot {
+    background: #e2e2e2;
+    color: black;
+    margin-right: auto;
+}
+
+.chat-input {
+    display: flex;
+    padding: 10px;
+    background: #2c2c2c;
+    gap: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.chat-input button {
+    background: #ff0000;
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
