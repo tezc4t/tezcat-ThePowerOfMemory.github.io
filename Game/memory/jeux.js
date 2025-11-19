@@ -2,7 +2,6 @@ function genererGrille() {
     let genererClick = true;
     const taille = document.querySelector('#grid-size').value;
     const difficulte = document.querySelector('#theme').value;
-    console.log(taille, difficulte);
 };
 
 
@@ -41,6 +40,25 @@ let gameTimer = {
     },
 };
 
+function newscore() {
+    fetch("../../utils/newscore.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            score: gameTimer.getTimer(),
+            gridSize: document.querySelector('#grid-size').value
+        })
+        })
+        .then(response => response.json())
+        .then(data => {
+          
+        })
+        .catch(error => {
+            console.error("le score n'a pas été récéptioné :", error);
+        });
+};
 
 const generateBtn = document.querySelector('#generate');
 
@@ -78,3 +96,14 @@ generateBtn.addEventListener("click", () => {
         gridElement.appendChild(cell);
     }
 })
+function gameover() {
+    newscore();
+    alert("Votre score est de " + gameTimer.getTimer());
+    if (confirm("Voulez-vous rejouer")) {
+        genererGrille();
+        gameTimer.startTimer();
+    } else {
+        alert("Merci d'avoir joué !");
+        stopTimer();
+}
+}

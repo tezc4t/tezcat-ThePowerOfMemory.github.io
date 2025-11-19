@@ -85,7 +85,7 @@
    
 </body>
 <?php
-include '../../partials/footer.php'; // inclusion du footer
+include '../../partials/footergame.php'; // inclusion du footer
 ?>
 
 </html>

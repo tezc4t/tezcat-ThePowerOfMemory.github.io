@@ -43,10 +43,10 @@ include '../../partials/headgame.php';
         <div class="texte-gauche">
             <h3 class="sous-titre">KCULTURE INFO</h3>
             <p class="corps">Venez decouvrir  notre tout nouveau Jeu de culture informatique, présenté sous formes de questions reponses "battle royale" à la maniere d'un Maitre des Fleurs</p>
-            <a href="pagejeux.html" class="btn-jouer">Jouer</a>
+            <a href="pagejeux.php" class="btn-jouer">Jouer</a>
         </div>
         <div class="image-droite">
-            <img src="img/manette.jpg" alt="silksong">
+            <img src="../../img/manette.jpg" alt="silksong">
         </div>
     </div>
         <script>
@@ -121,7 +121,7 @@ include '../../partials/headgame.php';
         
 </body>
 <?php
-include '../../partials/footer.php'; // inclusion du footer
+include '../../partials/footergame.php'; // inclusion du footer
 ?>
 <script src="../../Game/memory/jeux.js"> </script> 
 </html>
