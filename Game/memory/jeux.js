@@ -1,3 +1,10 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const messagesContainer = document.getElementById('messages');
+    const chatInput = document.getElementById('chat-message');
+    const sendButton = document.getElementById('chat-send');
+
+    // ID utilisateur injecté depuis PHP
+    // <script>const CURRENT_USER_ID = <?= $_SESSION['userid']; ?>;</script>
 function genererGrille() {
     let genererClick = true;
     const taille = document.querySelector('#grid-size').value;
@@ -55,49 +62,98 @@ generateBtn.addEventListener("click", () => {
     }
 });
 
-function loadMessages() {
-    fetch("load.php")
-        .then(response => response.json())
-        .then(data => {
-            let box = document.getElementById("messages");
-            box.innerHTML = "";
 
-            data.forEach(m => {
-                let div = document.createElement("div");
-                div.classList.add("chat-msg");
+    function renderMessages(data) {
+        let output = '';
+        data.forEach(msg => {
+            const isMine = msg.user_id == CURRENT_USER_ID;
+            const messageClass = isMine ? 'my-message' : 'other-message';
 
-                if (m.sender === "user") div.classList.add("chat-user");
-                else div.classList.add("chat-bot");
-
-                div.textContent = m.message;
-                box.appendChild(div);
-            });
-
-            box.scrollTop = box.scrollHeight;
+            output += `
+                <div class="chat-message ${messageClass}">
+                    <span class="chat-pseudo">${msg.pseudo}</span>
+                    <p>${msg.message}</p>
+                    <span class="chat-time">${new Date(msg.timestamp).toLocaleTimeString()}</span>
+                </div>
+            `;
         });
-}
 
-function sendMessage() {
-    let msg = document.getElementById("chat-message").value;
-    if (msg.trim() === "") return;
+        messagesContainer.innerHTML = output;
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
 
-    fetch("send.php", {
-        method: "POST",
-        headers: {"Content-Type": "application/x-www-form-urlencoded"},
-        body: "message=" + encodeURIComponent(msg)
-    }).then(() => {
-        document.getElementById("chat-message").value = "";
-        loadMessages();
+    function fetchMessages() {
+        fetch('fetch_messages.php')
+            .then(res => res.json())
+            .then(data => {
+                if (!data.error) renderMessages(data);
+            })
+            .catch(err => console.error(err));
+    }
+
+    function sendMessage() {
+        const text = chatInput.value.trim();
+        if (text === "") return;
+
+        const formData = new FormData();
+        formData.append('message', text);
+
+        fetch('send_message.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.status === 'success') {
+                chatInput.value = '';
+                fetchMessages();
+            } else {
+                alert("Erreur : " + data.message);
+            }
+        })
+        .catch(err => console.error(err));
+    }
+
+    sendButton.addEventListener('click', sendMessage);
+
+    chatInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') sendMessage();
     });
-}
 
-document.getElementById("chat-send").addEventListener("click", sendMessage);
-
-// Enter pour envoyer
-document.getElementById("chat-message").addEventListener("keypress", function(e) {
-    if (e.key === "Enter") sendMessage();
+    fetchMessages();
+    setInterval(fetchMessages, 2000);
 });
 
-// Refresh auto
-setInterval(loadMessages, 1000);
-loadMessages();
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleChatBtn = document.getElementById('toggle-chat');
+    const chatPanel = document.getElementById('chat-panel');
+
+    if (!toggleChatBtn || !chatPanel) return;
+
+    toggleChatBtn.addEventListener('click', () => {
+        chatPanel.classList.toggle('hidden');
+    });
+   
+});
+
+// Bouton et panneau
+const toggleBtn = document.getElementById("toggle-chat");
+const chatPanel = document.querySelector(".chat-panel");
+
+// Sécurité : si un des deux manque on stoppe
+if (!toggleBtn || !chatPanel) {
+    console.error("Bouton #toggle-chat ou .chat-panel introuvable");
+} else {
+
+    // État initial : si chat caché on met l’icône vers le haut
+    toggleBtn.textContent = chatPanel.classList.contains("hidden") ? "▲" : "▼";
+
+    // Toggle au clic
+    toggleBtn.addEventListener("click", () => {
+        chatPanel.classList.toggle("hidden");
+
+        // Change l’icône
+        toggleBtn.textContent =
+            chatPanel.classList.contains("hidden") ? "▲" : "▼";
+    });
+}
