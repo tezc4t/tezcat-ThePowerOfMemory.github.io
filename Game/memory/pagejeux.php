@@ -1,12 +1,8 @@
 <?php
 session_start();
 
-// Inclure le fichier de connexion PDO
 require_once(__DIR__ . '/../../utils/config.php');
 
- // ton fichier qui initialise $pdo
-
-// Utiliser l'ID 1 pour cette page
 $chosenUserId = 1;
 
 // Récupérer l'utilisateur depuis la base
@@ -14,11 +10,19 @@ $stmt = $pdo->prepare("SELECT * FROM utilisateur WHERE id = ?");
 $stmt->execute([$chosenUserId]);
 $user = $stmt->fetch();
 
-if($user) {
-    // Stocker l'ID seulement pour cette page
+if ($user) {
+
     $_SESSION['temp_user_id'] = $user['id'];
+
+    if (isset($user['Pseudo']) && !empty($user['Pseudo'])) {
+        $_SESSION['temp_pseudo'] = $user['Pseudo'];
+    } else {
+        die("ERREUR : l’utilisateur ID 1 n’a pas de pseudo en base.");
+    }
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -55,7 +59,7 @@ if($user) {
             </select>
 
             <button id="generate">Générer une grille</button>
-            <p>timer : </p>
+            <p>timer :</p>
             <p id="timer"></p>
         </div>
 
@@ -72,16 +76,13 @@ if($user) {
             <img src="../../img/manette.jpg" alt="silksong">
         </div>
     </div>
-    <button id="toggle-chat" class="toggle-chat-btn">▼</button>
-    
 
-    <!-- Fenêtre de Chat -->
+    <button id="toggle-chat" class="toggle-chat-btn">▼</button>
+
     <div class="chat-panel">
         <div class="chat-header">Power Of Memory - Chat</div>
 
-        <div class="chat-messages" id="messages">
-            <!-- Messages dynamiques -->
-        </div>
+        <div class="chat-messages" id="messages"></div>
 
         <div class="chat-input">
             <input type="text" id="chat-message" placeholder="Écrire un message...">
@@ -89,15 +90,16 @@ if($user) {
         </div>
     </div>
 
-    <?php include '../../partials/footer.php'; // inclusion du footer ?>
+    <?php include '../../partials/footer.php'; ?>
+
     <script>
     // Injection de l'ID utilisateur depuis PHP vers JS
     const CURRENT_USER_ID = <?= json_encode($_SESSION['temp_user_id'] ?? null); ?>;
-
     </script>
+
     <script src="../../Game/memory/jeux.js"></script>
     <script>
-console.log("CURRENT_USER_ID =", CURRENT_USER_ID);
-</script>   
+        console.log("CURRENT_USER_ID =", CURRENT_USER_ID);
+    </script>   
 </body>
 </html>

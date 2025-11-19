@@ -9,7 +9,6 @@ if (!isset($_SESSION['temp_user_id']) || !isset($_SESSION['temp_pseudo'])) {
     exit;
 }
 
-// Vérifier le message
 if (!isset($_POST['message']) || trim($_POST['message']) === "") {
     echo json_encode(["status" => "error", "message" => "Message vide"]);
     exit;
@@ -17,7 +16,7 @@ if (!isset($_POST['message']) || trim($_POST['message']) === "") {
 
 $message = trim($_POST['message']);
 $user_id = $_SESSION['temp_user_id'];
-$pseudo = $_SESSION['temp_pseudo'];
+$pseudo  = $_SESSION['temp_pseudo'];
 
 try {
     $stmt = $pdo->prepare("INSERT INTO chat_messages (user_id, pseudo, message, created_at) VALUES (?, ?, ?, NOW())");
@@ -28,3 +27,4 @@ try {
     echo json_encode(["status" => "error", "message" => $e->getMessage()]);
 }
 exit;
+

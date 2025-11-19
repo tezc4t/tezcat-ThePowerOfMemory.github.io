@@ -136,16 +136,15 @@ document.addEventListener('DOMContentLoaded', () => {
    
 });
 
-// Bouton et panneau
+// PANEL 
 const toggleBtn = document.getElementById("toggle-chat");
 const chatPanel = document.querySelector(".chat-panel");
 
-// Sécurité : si un des deux manque on stoppe
+// Sécurité 
 if (!toggleBtn || !chatPanel) {
     console.error("Bouton #toggle-chat ou .chat-panel introuvable");
 } else {
 
-    // État initial : si chat caché on met l’icône vers le haut
     toggleBtn.textContent = chatPanel.classList.contains("hidden") ? "▲" : "▼";
 
     // Toggle au clic
@@ -156,4 +155,10 @@ if (!toggleBtn || !chatPanel) {
         toggleBtn.textContent =
             chatPanel.classList.contains("hidden") ? "▲" : "▼";
     });
+}
+
+if (message.message.endsWith('.gif')) {
+    messageHTML = `<img src="${message.message}" class="gif-msg">`;
+} else {
+    messageHTML = `<p>${message.message}</p>`;
 }
