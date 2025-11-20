@@ -4,9 +4,9 @@
    body {
     background-color: #ffffff;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Police */
-    margin: 0; /* Supprime les marges par dÃ©faut (corrigÃ© : O â†’ 0) */
-    min-height: 100vh; /* Hauteur minimum = hauteur de l'Ã©cran */
-    background-size: cover; /* Lâ€™image couvre toute la surface */
+    margin: 0; /* Supprime les marges par defaut */
+    min-height: 100vh; /* Hauteur minimum = hauteur de l'ecran */
+    background-size: cover; /* L'image couvre toute la surface */
     display: flex; /* Mise en page en flexbox */
     justify-content: center; /* Centre horizontalement */
     align-items: center; /* Centre verticalement */
@@ -17,7 +17,7 @@
    ================================================ */
 .all {
     display: flex;
-    flex-wrap: wrap; /* Les Ã©lÃ©ments passent Ã  la ligne si nÃ©cessaire */
+    flex-wrap: wrap; /* Les alignements passent a la ligne si naicessaire */
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -33,9 +33,11 @@
     max-width: 400px; 
     background-color: white; 
     border-radius: 11px; /* Bords arrondis */
-    padding: 29px; /* Espacement interne (corrigÃ© : O â†’ 0) */
+    padding: 29px; /* Espacement interne */
     box-sizing: border-box;
 }
+
+
 
 /* ================================================
    SECTION IMAGE
@@ -53,7 +55,7 @@
 
 #jspencore {
     border-radius: 16px;
-    width: 130%; /* DÃ©passe lÃ©gÃ¨rement le conteneur */
+    width: 130%; /* Dépasse largement le conteneur */
     max-width: 650px;
     height: auto;
 }
@@ -74,12 +76,26 @@
     color: black;
 }
 
+label {
+    font-size: small; /* Légende sous une image */
+}
+
 figcaption {
-    font-size: small; /* LÃ©gende sous une image */
+    font-size: small; /* Légende sous une image */
+}
+
+p {
+   font-size: small; 
+}
+
+
+.auth-form label {
+    display: block;
+    font-weight: 400;
 }
 
 /* ================================================
-   LIEN "mot de passe oubliÃ©"
+   LIEN "mot de passe oublié"
    ================================================ */
 #mdpo {
     display: block;
@@ -87,13 +103,21 @@ figcaption {
     font-size: small;
     text-align: end;
     color: #1E4AE9;
-    margin-top: -10px; /* Remonte lÃ©gÃ¨rement */
+    margin-top: -10px; /* Remonte largement */
 }
 
 /* ================================================
    CHAMPS DE FORMULAIRE
    ================================================ */
 #text {
+    background-color: #F7FBFF;
+    border-radius: 11px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 14px;
+    box-sizing: border-box;
+}
+.auth-field {
     background-color: #F7FBFF;
     border-radius: 11px;
     margin-bottom: 20px;
@@ -126,7 +150,7 @@ figcaption {
     transition: background 0.3s ease; /* Effet hover */
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Espacement entre icÃ´ne et texte */
+    gap: 10px; 
     border-radius: 11px;
     width: 100%;
     margin-top: 20px;
@@ -135,14 +159,14 @@ figcaption {
 }
 
 /* ================================================
-   TEXTE DE SÃ‰PARATION ("OU")
+   TEXTE DE SÉPARATION ("OU")
    ================================================ */
 #ou {
     text-align: center;
 }
 
 /* ================================================
-   BOUTON GOOGLE (icÃ´ne)
+   BOUTON GOOGLE 
    ================================================ */
 #google {
     border-radius: 16px;
@@ -203,4 +227,44 @@ figcaption {
 #INSCR,
 #AC {
     text-decoration: none;
+}
+
+
+#strength-bar {
+    position: relative;
+    height: 5px;
+    width: 100%;
+    background: #ccc;
+    margin-top: 5px;
+    border-radius: 3px;
+}
+
+#strength-bar:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+
+    display: block;
+    height: 100%;
+}
+
+#strength-bar.strength-null:before {
+    width: 100%;
+    background-color: #ccc;
+}
+
+#strength-bar.strength-faible:before {
+    width: 33%;
+    background-color: red;
+}
+
+#strength-bar.strength-moyenne:before {
+    width: 66%;
+    background-color: gold;
+}
+
+#strength-bar.strength-forte:before {
+    width: 100%;
+    background-color: lightgreen;
 }
