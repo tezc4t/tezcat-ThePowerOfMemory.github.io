@@ -44,6 +44,10 @@ h1, h2 {
     border-radius: 4px;
 }
 
+#photoprofil{
+    width : 30%;
+}
+
 .buttons {
     margin-top: 20px;
     display: flex;
@@ -60,11 +64,6 @@ button {
 
 button[type="submit"] {
     background-color: #4CAF50;
-    color: white;
-}
-
-button.delete {
-    background-color: #f44336;
     color: white;
 }
 

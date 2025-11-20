@@ -37,52 +37,56 @@ include __DIR__ . '/../../partials/headjs.php';
         <h1>Score Of The Power of Memory</h1>
         <p>Tentez de battre nos meilleurs joueurs avec le moins de temps possible !</p>
     </div>
-   <div class="scoreboard">
-        <form method="GET" class="scoreboard-controls">
-            <label id="SRC" for="search">Rechercher </label>
+    <div class="scoreboard">
+    <form method="GET" class="scoreboard-controls">
+        <div class="filter-group">
+            <label id="SRC" for="search">Rechercher</label>
             <input type="text" id="search" name="search" value="<?= htmlspecialchars($search) ?>">
-
-            <label id="SRC" for="difficulty">Difficulté :</label>
+        </div>
+        <div class="filter-group">
+            <label id="SRC" for="difficulty">Difficulté</label>
             <select id="difficulty" name="difficulty">
                 <option value="all" <?= $difficulty === 'all' ? 'selected' : '' ?>>Toutes</option>
                 <option value="facile" <?= $difficulty === 'facile' ? 'selected' : '' ?>>Facile</option>
                 <option value="moyenne" <?= $difficulty === 'moyenne' ? 'selected' : '' ?>>Moyenne</option>
                 <option value="difficile" <?= $difficulty === 'difficile' ? 'selected' : '' ?>>Difficile</option>
-            </select> 
-            <button type="submit" class="filter-button">Filtrer</button>
-        </form>
+            </select>
+        </div>
+        <button type="submit" class="filter-button">Filtrer</button>
+    </form>
 
-        <table class="scores-table">
-            <thead>
+    <table class="scores-table">
+        <thead>
             <tr>
                 <th>#</th>
                 <th>Jeu</th>
-                <th>Noms Joueurs</th>
+                <th>Joueur</th>
                 <th>Difficulté</th>
                 <th>Score</th>
                 <th>Date</th>
             </tr>
-            </thead>
-            <tbody>
+        </thead>
+        <tbody>
             <?php if (empty($filtered_scores)): ?>
-                <tr>
-                    <td colspan="6" class="no-results">Aucun résultat trouvé</td>
-                </tr>
+            <tr>
+                <td colspan="6" class="no-results">Aucun résultat trouvé</td>
+            </tr>
             <?php else: ?>
-                <?php foreach ($filtered_scores as $score): ?>
-                <tr>
-                    <td><?= htmlspecialchars($score['id']) ?></td>
-                    <td><img id="f" src="<?= $baseHref ?>img/truememory.jpg" alt="memory game"> <?= htmlspecialchars($score['game']) ?></td>
-                    <td><?= htmlspecialchars($score['player']) ?></td>
-                    <td><?= htmlspecialchars($score['difficulty']) ?></td>
-                    <td><?= htmlspecialchars($score['score']) ?></td>
-                    <td><?= htmlspecialchars($score['date']) ?></td>
-                </tr>
-                <?php endforeach; ?>
+            <?php foreach ($filtered_scores as $score): ?>
+            <tr>
+                <td><?= htmlspecialchars($score['id']) ?></td>
+                <td><img id="f" src="<?= $baseHref ?>img/truememory.jpg" alt="memory game"> <?= htmlspecialchars($score['game']) ?></td>
+                <td><?= htmlspecialchars($score['player']) ?></td>
+                <td><?= htmlspecialchars($score['difficulty']) ?></td>
+                <td><?= htmlspecialchars($score['score']) ?></td>
+                <td><?= htmlspecialchars($score['date']) ?></td>
+            </tr>
+            <?php endforeach; ?>
             <?php endif; ?>
-            </tbody>
-        </table>
-    </div>
+        </tbody>
+    </table>
+</div>
+
     <div class="section-container">
         <div class="texte-gauche">
             <h3 class="sous-titre">Envie de Contester un titre <br> ou une place ?</h3>

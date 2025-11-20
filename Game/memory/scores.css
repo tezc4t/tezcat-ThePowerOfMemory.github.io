@@ -36,11 +36,67 @@ body {
 /* =======================================================
    TABLEAU DES SCORES
    ======================================================= */
-.scoreboard {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
+   .scoreboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px;
 }
+
+/* Scoreboard controls */
+.scoreboard-controls {
+  display: flex;
+  justify-content: center;   /* Centre horizontalement */
+  align-items: center;       /* Centre verticalement */
+  gap: 15px;
+  flex-wrap: wrap;           /* Passage à la ligne si écran petit */
+  background-color: #070320;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Groupe input/label */
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: white;
+  font-size: 0.9em;
+}
+
+/* Champs input et select */
+.scoreboard-controls input,
+.scoreboard-controls select {
+  padding: 0 10px;
+  height: 36px;              /* Même hauteur que le bouton */
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
+  width: 150px;              /* Limite la largeur pour qu’elle ne dépasse pas le bouton */
+}
+
+/* Bouton de filtrage */
+.filter-button {
+  margin-top: 23px;
+  background-color: #ff0000;
+  color: #fff;
+  padding: 0 15px;
+  height: 36px;              /* Même hauteur que les champs */
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;       /* Centre verticalement le texte */
+  justify-content: center;   /* Centre horizontalement le texte */
+}
+
+.filter-button:hover {
+  background-color: #cc0000;
+}
+
 
 table {
   width: 70%;
@@ -237,3 +293,4 @@ footer hr {
 #SRC {
   color: white;
 }
+

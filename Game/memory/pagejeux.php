@@ -93,7 +93,6 @@ if ($user) {
     <?php include '../../partials/footer.php'; ?>
 
     <script>
-        
     const CURRENT_USER_ID = <?= json_encode($_SESSION['temp_user_id'] ?? null); ?>;
     </script>
 

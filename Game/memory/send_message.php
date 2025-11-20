@@ -3,7 +3,6 @@ session_start();
 require __DIR__ . '/../../utils/config.php';
 header('Content-Type: application/json');
 
-// Vérifier session
 if (!isset($_SESSION['temp_user_id']) || !isset($_SESSION['temp_pseudo'])) {
     echo json_encode(["status" => "error", "message" => "Non connecté"]);
     exit;
