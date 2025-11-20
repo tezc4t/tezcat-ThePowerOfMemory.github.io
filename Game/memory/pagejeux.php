@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 
+<head>
+    <link rel="stylesheet" href="pagejeux.css">
 
-<?php
-$title = "Index";
-$cssFile = "Game/memory/pagejeux.css"; // Feuille de style principale
-include 'partials/head_pagejeux.php'; // inclusion du <head>
-include 'partials/header.php'; // inclusion du header
-?>
-   
-    
+    <?php include '../../partials/headjs.php'; ?>
+    <?php include '../../utils/fonctionjs.php'; ?>
+</head>
+
 <body>
+    <?php include '../../partials/headerjs.php'; ?>
         
     <div class="intro-jeu">
         <h1>Bienvenue dans The Power of Memory</h1>
@@ -26,33 +25,29 @@ include 'partials/header.php'; // inclusion du header
 
         <label for="theme">Thème</label>
         <select id="theme">
-            <option value="JeuxVidéo">JeuxVidéo</option>
-            <option value="Animaux">Animaux</option>
-            <option value="Nourriture">Nourriture</option>
+            <option value="jeux_video">JeuxVidéo</option>
+            <option value="animaux">Animaux</option>
+            <option value="nourriture">Nourriture</option>
         </select>
 
         <button id="generate">Générer une grille</button>
+        <p>timer : </p>
+        <p id="timer"></p>
         </div>
 
-        <div class="grid">
-            <!-- 16 images de manettes -->
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img\j n64.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img\j n64.jpg" alt="Manette"></div>
-            <div class="cell"><img src="img/card1.jpg" alt="Manette"></div>
-        </div>
+        <div class="grid" id="grid"></div>
+
+
+<style type="text/css">
+<!--
+body{
+background: url(images/<?php echo $selectedBg; ?>) no-repeat;
+}
+-->
+</style>
+
+
+
     </div>
     <div class="section-container">
         <div class="texte-gauche">
@@ -61,29 +56,26 @@ include 'partials/header.php'; // inclusion du header
             <a href="pagejeux.html" class="btn-jouer">Jouer</a>
         </div>
         <div class="image-droite">
-            <img src="img/manette.jpg" alt="silksong">
+            <img src="../../img/manette.jpg" alt="silksong">
         </div>
     </div>
-    <aside class="chat-panel" aria-label="Espace de chat">
-        <header class="chat-header">
-            <div>
-                <div>Power Of Memory</div>
-            </div>
-        </header>
-        <div class="messages">
-            <div class="msg bot">Encore Gagné.</div>
-            <div class="msg user">Je vais te battre.</div>
+            <!-- Fenêtre de Chat -->
+            <div class="chat-panel">
+        <div class="chat-header">Power Of Memory - Chat</div>
+
+        <div class="chat-messages" id="messages">
+            <!-- Messages dynamiques -->
         </div>
+
         <div class="chat-input">
-            <form>
-                <input type="text" placeholder="Écrire un message..." aria-label="Message"  />
-            </form>
+            <input type="text" id="chat-message" placeholder="Écrire un message...">
+            <button id="chat-send">Envoyer</button>
         </div>
-    </aside>
+    </div>
         
 </body>
 <?php
-include 'partials/footer.php'; // inclusion du footer
+include '../../partials/footer.php'; // inclusion du footer
 ?>
-    
+<script src="../../Game/memory/jeux.js"></script>   
 </html>
