@@ -21,22 +21,22 @@ mdp.addEventListener("input",() => {
     } else if (score === 1) {
         bar.classList = '';
         bar.classList.add("strength-faible");
-        text.textContent = "Faible";
+        text.textContent = "Sécuriter: Faible";
     } else if (score === 2) {
         bar.classList = '';
         bar.classList.add("strength-moyenne");
-        text.textContent = "Moyenne";
+        text.textContent = "Sécuriter: Moyenne";
     } else if (score === 3) {
         bar.classList = '';
         bar.classList.add("strength-moyenne");
-        text.textContent = "Moyenne";
+        text.textContent = "Sécuriter: Moyenne";
     } else if (score === 4) {
         bar.classList = '';
         bar.classList.add("strength-moyenne");
-        text.textContent = "Moyenne";
+        text.textContent = "Sécuriter: Moyenne";
     } else {
         bar.classList = '';
         bar.classList.add("strength-forte");
-        text.textContent = "Forte";
+        text.textContent = "Sécuriter: Forte";
     }
 });
