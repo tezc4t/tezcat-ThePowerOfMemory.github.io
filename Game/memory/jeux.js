@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-/* ------- NOUVEAUTÉS JEU / TIMER / GRILLE ------- */
+
 
 function genererGrille() {
     const taille = document.querySelector('#grid-size').value;

@@ -15,9 +15,6 @@
 <body>
 
     <div class="all" >
-        <a href="accueil.php" ><button id="AC"><img src="img/buttonhome.jpg"></button></a><!---define home button--->
-        <a href="index.php"><button id="home"><img src="img/buttonprofil.jpg"></button></a><!---define redirection button to index.html--->
-        <a href="inscription.php"><button id="INSCR"><img src="img/buttonprofil.jpg"></button></a><!---define redirection button to inscription.html--->
         <div class="container" ><!---define the container class for the first div--->
             <header>
                 <h1 id="titremain">Heureux de vous revoir</h1><!---define main title and second title--->
