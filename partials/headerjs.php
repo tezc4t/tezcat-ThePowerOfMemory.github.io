@@ -9,7 +9,7 @@
 
         <nav class="menu">
             <a class="<?php active('accueil.php'); ?>" id="accueil" href="../../accueil.php">Accueil</a>
-            <a class="<?php active('scores.php'); ?>" id="scores" href="Game/memory/scores.php">Scores</a>
+            <a class="<?php active('scores.php'); ?>" id="scores" href ="/game/memory/scores.php">Scores</a>
             <a class="<?php active('ACS.php'); ?>" id="Profil" href="../../ACS.php">tezcat</a>
             <a class="<?php active('html contact.php'); ?>" id="contact" href="../../html contact.php">Nous contacter</a>
         </nav>
